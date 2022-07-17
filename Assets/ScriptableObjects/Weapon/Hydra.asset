@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465eaa51f77cc6449fe607d312c6a4d, type: 3}
+  m_Name: Hydra
+  m_EditorClassIdentifier: 
+  _weaponLevels:
+  - _shootingStats:
+      _spreadAngle: 3
+      _maxAmmo: 10
+      _overheatable: 0
+      _shotDelay: 1
+      _reloadTime: 4
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 2211948743871716925, guid: 5a152ae636befee4c8b2ff840d155d3b, type: 3}
+      _minMaxDamage: {x: 0, y: 150}
+      _explosionRadius: 3
+      _speed: 75
+      _engineBurnTime: 0.5
+      _hitEffect: {fileID: 8611908471861341769, guid: 4c10ea08e29b8c94f919ee1d1513e7bc, type: 3}
+      _hitSound: {fileID: 8300000, guid: ce45383cdcb83ed40bc1559744513741, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+    _upgradeStats:
+      _price: 2000
+    _controllableStats:
+      _sensivity: {x: 0, y: 0}
+  - _shootingStats:
+      _spreadAngle: 2.5
+      _maxAmmo: 15
+      _overheatable: 0
+      _shotDelay: 0.75
+      _reloadTime: 5
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 2211948743871716925, guid: 5a152ae636befee4c8b2ff840d155d3b, type: 3}
+      _minMaxDamage: {x: 0, y: 200}
+      _explosionRadius: 4
+      _speed: 100
+      _engineBurnTime: 0.5
+      _hitEffect: {fileID: 8611908471861341769, guid: 4c10ea08e29b8c94f919ee1d1513e7bc, type: 3}
+      _hitSound: {fileID: 8300000, guid: ce45383cdcb83ed40bc1559744513741, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+    _upgradeStats:
+      _price: 3000
+    _controllableStats:
+      _sensivity: {x: 0, y: 0}
+  - _shootingStats:
+      _spreadAngle: 2
+      _maxAmmo: 20
+      _overheatable: 0
+      _shotDelay: 0.5
+      _reloadTime: 5
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 2211948743871716925, guid: 5a152ae636befee4c8b2ff840d155d3b, type: 3}
+      _minMaxDamage: {x: 0, y: 250}
+      _explosionRadius: 5
+      _speed: 125
+      _engineBurnTime: 0.5
+      _hitEffect: {fileID: 8611908471861341769, guid: 4c10ea08e29b8c94f919ee1d1513e7bc, type: 3}
+      _hitSound: {fileID: 8300000, guid: ce45383cdcb83ed40bc1559744513741, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+    _upgradeStats:
+      _price: 500
+    _controllableStats:
+      _sensivity: {x: 0, y: 0}

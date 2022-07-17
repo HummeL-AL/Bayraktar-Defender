@@ -1,0 +1,54 @@
+{
+    "name": "UI",
+    "maps": [
+        {
+            "name": "In-Game",
+            "id": "da1337d5-ead6-43fb-9ef4-c87c242d54c1",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "fb999455-1ca3-4b2c-bd92-0e9c92844136",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenUpgradeTab",
+                    "type": "Button",
+                    "id": "5e77758c-0213-4791-9050-1baf04a09fa9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0783dc39-f4f8-4db1-93cc-23aa657ac34d",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cd9acfc-9bd0-49b6-9a87-01d8cbf33fe8",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenUpgradeTab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
