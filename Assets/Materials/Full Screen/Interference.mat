@@ -111,11 +111,11 @@ Material:
     - _GlossyReflections: 0
     - _LineCount: 3
     - _LineSpeed: 0.05
-    - _LineStrength: 0.25
+    - _LineStrength: 0.1
     - _LineThickness: 0
     - _Metallic: 0
     - _NoiseScale: 25
-    - _NoiseStrength: 0.1
+    - _NoiseStrength: 0.05
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
