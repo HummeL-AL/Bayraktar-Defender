@@ -59,7 +59,7 @@ public class PlayerWeapon : MonoBehaviour
             if (_choosedWeapon.IsAbleToShoot())
             {
                 _choosedWeapon.Shoot(Utility.GetCameraLookingPoint());
-                WeaponStats weaponStats = _choosedWeapon.GetWeaponData().GetWeaponStats(_choosedWeapon.GetWeaponLevel());
+                WeaponStats weaponStats = _choosedWeapon.GetWeaponData().GetWeaponStats(_choosedWeapon.GetCurrentLevel());
                 waitTime = weaponStats.ShootingStats.ShotDelay;
             }
             yield return new WaitForSeconds(waitTime);
@@ -79,6 +79,8 @@ public class PlayerWeapon : MonoBehaviour
         {
             _choosedWeapon = _weapons[nextID];
         }
+
+        GameEventHandler.WeaponSwitched.Invoke();
     }
 
     private void ChoosePreviousWeapon()
@@ -94,5 +96,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             _choosedWeapon = _weapons[prevID];
         }
+
+        GameEventHandler.WeaponSwitched.Invoke();
     }
 }

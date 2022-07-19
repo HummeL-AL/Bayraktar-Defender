@@ -85,14 +85,23 @@ public class Weapon : MonoBehaviour, IUpgradable
         return _weaponData;
     }
 
-    public int GetWeaponLevel()
+    public ShootingStats GetShootingStats()
     {
-        return _weaponLevel;
+        return _shootingStats;
     }
 
     public int GetCurrentLevel()
     {
         return _weaponLevel;
+    }
+    public float GetAmmo()
+    {
+        return _ammo;
+    }
+
+    public float GetHeat()
+    {
+        return _heat;
     }
 
     private void Awake()
@@ -126,13 +135,14 @@ public class Weapon : MonoBehaviour, IUpgradable
         }
         else
         {
-            if (_heat >= 1)
+            if (_heat >= 1 && _shootingStats.Overheatable)
             {
                 _overheated = true;
             }
 
             _heat -= _coolingSpeed * Time.deltaTime;
         }
+        GameEventHandler.WeaponStatsChanged.Invoke();
     }
 
     private IEnumerator ShootRoutine(Vector3 targetPosition)
@@ -152,19 +162,21 @@ public class Weapon : MonoBehaviour, IUpgradable
             projectile.SetProjectileStats(projectileStats);
             if (controllable) projectile.SetControllableStats(controllable, controllableStats);
 
-            float radialOffset = Random.Range(0f, 360f);
             float spreadPercent = Random.Range(0f, 1f);
-            Vector3 rotationVector = Quaternion.AngleAxis(radialOffset, Vector3.forward) * Vector3.right;
-            projectile.transform.rotation *= Quaternion.AngleAxis(_shootingStats.SpreadAngle * spreadPercent, rotationVector);
+            float radialOffset = Random.Range(0f, 360f);
 
-            //projectile.transform.Rotate(Vector3.forward * radialOffset);
-            //projectile.transform.Rotate(Vector3.right * _shootingStats.SpreadAngle * spreadPercent - Vector3.forward * radialOffset);
+            Vector2 minMaxSpread = _shootingStats.SpreadAngle;
+            float spreadAngle = minMaxSpread.x + (minMaxSpread.y - minMaxSpread.x) * _heat;
+
+            Vector3 rotationVector = Quaternion.AngleAxis(radialOffset, Vector3.forward) * Vector3.right;
+            projectile.transform.rotation *= Quaternion.AngleAxis(spreadAngle * spreadPercent, rotationVector);
 
             AudioSource.PlayClipAtPoint(_shootingStats.ShootSound, shootPosition);
 
             _heat += _shootingStats.ShotHeat;
             _ammo--;
             _reloaded = false;
+            GameEventHandler.WeaponStatsChanged.Invoke();
             yield return new WaitForSeconds(_shootingStats.ShotDelay);
             _reloaded = true;
         }
@@ -189,8 +201,10 @@ public class Weapon : MonoBehaviour, IUpgradable
     private IEnumerator Reload()
     {
         _reloaded = false;
+        GameEventHandler.WeaponStatsChanged.Invoke();
         yield return new WaitForSeconds(_shootingStats.ReloadTime);
         _ammo = _shootingStats.MaxAmmo;
         _reloaded = true;
+        GameEventHandler.WeaponStatsChanged.Invoke();
     }
 }

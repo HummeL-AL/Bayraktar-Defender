@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponLevels:
   - _shootingStats:
-      _spreadAngle: 1
+      _spreadAngle: {x: 0.5, y: 1.5}
       _maxAmmo: 150
-      _overheatable: 0
+      _overheatable: 1
       _shotDelay: 0.15
       _reloadTime: 4
       _shotHeat: 0.02
@@ -24,6 +24,7 @@ MonoBehaviour:
       _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 0
       _minMaxDamage: {x: 50, y: 100}
       _explosionRadius: 1
       _speed: 150
@@ -36,7 +37,7 @@ MonoBehaviour:
     _controllableStats:
       _sensivity: {x: 0, y: 0}
   - _shootingStats:
-      _spreadAngle: 0.8
+      _spreadAngle: {x: 0.5, y: 1.25}
       _maxAmmo: 200
       _overheatable: 0
       _shotDelay: 0.125
@@ -46,6 +47,7 @@ MonoBehaviour:
       _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 0
       _minMaxDamage: {x: 50, y: 150}
       _explosionRadius: 1
       _speed: 175
@@ -58,7 +60,7 @@ MonoBehaviour:
     _controllableStats:
       _sensivity: {x: 0, y: 0}
   - _shootingStats:
-      _spreadAngle: 0.6
+      _spreadAngle: {x: 0.5, y: 1}
       _maxAmmo: 250
       _overheatable: 0
       _shotDelay: 0.075
@@ -68,6 +70,7 @@ MonoBehaviour:
       _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 0
       _minMaxDamage: {x: 75, y: 150}
       _explosionRadius: 1
       _speed: 200

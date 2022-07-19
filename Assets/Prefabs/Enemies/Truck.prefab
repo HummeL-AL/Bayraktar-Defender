@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87511b42176a134fa03290d2c29572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthPoints: 300
+  _armorLevel: 0
+  _healthPoints: 200
 --- !u!114 &-9079052286795651081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,9 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnableEnemy: {fileID: 3580304689088744821, guid: 8177587e44c62904ca063e8e9608989b, type: 3}
-  _groupSpawnCooldown: 2
+  _groupSpawnCooldown: 3
   _spawnCooldown: 1
-  _groupCount: 5
+  _groupCount: 3
   _groupSize: 5
 --- !u!1001 &9110633801042383871
 PrefabInstance:

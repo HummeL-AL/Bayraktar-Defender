@@ -2,6 +2,11 @@ public static class GameEventHandler
 {
     public delegate void UIDelegate();
     public static UIDelegate StatsChanged = null;
+    public static UIDelegate WeaponSwitched = null;
+    public static UIDelegate WeaponStatsChanged = null;
+
+    public delegate void GameDelagate();
+    public static GameDelagate WaveChanged = null;
 
     public delegate void EnemyDelegate(Enemy enemy);
     public static EnemyDelegate EnemySpawned = null;

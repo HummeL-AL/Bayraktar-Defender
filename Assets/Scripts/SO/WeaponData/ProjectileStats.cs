@@ -5,6 +5,7 @@ using UnityEngine.Rendering.Universal;
 public struct ProjectileStats
 {
     [SerializeField] private Projectile _projectile;
+    [SerializeField] private int _penetrationLevel;
     [SerializeField] private Vector2 _minMaxDamage;
     [SerializeField] private float _explosionRadius;
     [SerializeField] private float _speed;
@@ -14,6 +15,7 @@ public struct ProjectileStats
     [SerializeField] private DecalProjector _landmark;
 
     public Projectile Projectile { get => _projectile; }
+    public int PenetrationLevel { get => _penetrationLevel; }
     public Vector2 MinMaxDamage { get => _minMaxDamage; }
     public float ExplosionRadius { get => _explosionRadius; }
     public float Speed { get => _speed; }

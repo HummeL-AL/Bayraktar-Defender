@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public struct ShootingStats
 {
-    [SerializeField] private float _spreadAngle;
+    [SerializeField] private Vector2 _spreadAngle;
     [SerializeField] private int _maxAmmo;
     [SerializeField] private bool _overheatable;
     [SerializeField] private float _shotDelay;
@@ -12,7 +12,7 @@ public struct ShootingStats
     [SerializeField] private float _coolingSpeed;
     [SerializeField] private AudioClip _shootSound;
 
-    public float SpreadAngle { get => _spreadAngle; }
+    public Vector2 SpreadAngle { get => _spreadAngle; }
     public int MaxAmmo { get => _maxAmmo; }
     public bool Overheatable { get => _overheatable; }
     public float ShotDelay { get => _shotDelay; }

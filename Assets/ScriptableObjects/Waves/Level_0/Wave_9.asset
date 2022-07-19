@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c397de20356a8c4c97e9ffdf795a234, type: 3}
   m_Name: Wave_9
   m_EditorClassIdentifier: 
-  _spawnTime: 0
+  _spawnTime: 840
   _enemies:
   - {fileID: 3580304689088744821, guid: 8177587e44c62904ca063e8e9608989b, type: 3}
   - {fileID: -2558097108203002265, guid: 154ef9bf9f9af8e44aadb684a895d242, type: 3}
   - {fileID: 1255902389653261103, guid: d2bf449511b112b4f9ec066ecea71eb6, type: 3}
   - {fileID: 3720635377666327657, guid: 028f81c2e67c46940913b218850b42d4, type: 3}
-  _enemiesCount: 00000000000000000000000000000000
+  _enemiesCount: 1e000000050000000a00000005000000

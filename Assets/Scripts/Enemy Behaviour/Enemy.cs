@@ -8,11 +8,13 @@ public class Enemy : MonoBehaviour
     public virtual void Awake()
     {
         GetComponent<Health>().Died += Death;
+        GameController.EnemiesCount++;
         GameEventHandler.EnemySpawned.Invoke(this);
     }
 
     public virtual void Death()
     {
+        GameController.EnemiesCount--;
         GameEventHandler.EnemyDied.Invoke(this);
         Destroy(gameObject);
     }

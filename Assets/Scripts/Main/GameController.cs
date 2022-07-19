@@ -4,18 +4,8 @@ using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
-    public static bool GamePaused
-    {
-        get
-        {
-            return _gameOnPause;
-        }
-        set
-        {
-            _gameOnPause = value;
-        }
-    }
-    private static bool _gameOnPause = false;
+    public static bool GamePaused { get; set; }
+    public static int EnemiesCount = 0;
 
     [SerializeField] private PlayerInput[] _inputs = null;
     [SerializeField] private PlayerInput _playerInput = null;
@@ -29,7 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private static int _victims = 0;
     [SerializeField] private static int _victimPenalty = 300;
 
-    private int _waveCount = 0;
+    private static int _waveCount = 0;
 
     public static int GetMoney()
     {
@@ -44,6 +34,11 @@ public class GameController : MonoBehaviour
     public static int GetVictims()
     {
         return _victims;
+    }
+
+    public static int GetWave()
+    {
+        return _waveCount;
     }
 
     public void Pause()
@@ -87,6 +82,7 @@ public class GameController : MonoBehaviour
             {
                 StartCoroutine(SpawnWave(wave));
                 _waveCount++;
+                GameEventHandler.WaveChanged.Invoke();
             }
         }
     }

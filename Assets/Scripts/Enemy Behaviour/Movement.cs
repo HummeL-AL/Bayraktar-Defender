@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
         Physics.Raycast(transform.position + Vector3.up * 50f, Vector3.down, out hit, 100f, 1 << 6);
 
         transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
-        transform.LookAt(Vector3.zero, hit.normal); //Quaternion.FromToRotation(Vector3.up, hit.normal);
+        transform.LookAt(Vector3.zero, hit.normal);
     }
 
     private IEnumerator MoveToDistance(float targetDistance)

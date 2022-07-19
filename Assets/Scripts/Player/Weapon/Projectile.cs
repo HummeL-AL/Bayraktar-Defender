@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
@@ -7,7 +8,8 @@ public class Projectile : MonoBehaviour
     public UnityEvent OnFuelBurnout;
 
     [SerializeField] private GameObject _vfx = null;
-    
+
+    private float _penetrationLevel = 0;
     private float _minDamage = 0;
     private float _maxDamage = 0;
     private float _explosionRadius = 0;
@@ -19,8 +21,14 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody _rigidbody = null;
 
+    private void Awake()
+    {
+        StartCoroutine(CheckHit());
+    }
+
     public void SetProjectileStats(ProjectileStats projectileStats)
     {
+        _penetrationLevel = projectileStats.PenetrationLevel;
         _minDamage = projectileStats.MinMaxDamage.x;
         _maxDamage = projectileStats.MinMaxDamage.y;
         _explosionRadius = projectileStats.ExplosionRadius;    
@@ -44,11 +52,28 @@ public class Projectile : MonoBehaviour
         UpdateFuel();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Explode();
+    //    SetLandmark(collision.contacts[0].normal);
+    //}
+
+    private IEnumerator CheckHit()
     {
-        Vector3 normal = collision.contacts[0].normal;
-        Explode();
-        SetLandmark(normal);
+        RaycastHit hit;
+        while (true)
+        {
+            Physics.Raycast(transform.position, transform.forward, out hit, _speed * Time.fixedDeltaTime, 1 << 6);
+
+            if (hit.collider)
+            {
+                yield return new WaitForFixedUpdate();
+                transform.position = hit.point + hit.normal * 0.5f;
+                Explode();
+                SetLandmark(hit.normal);
+            }
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     private void UpdateFuel()
@@ -79,15 +104,18 @@ public class Projectile : MonoBehaviour
         {
             Transform hittedEnemy = collider.transform;
             Health hittedHealth = hittedEnemy.GetComponent<Health>();
-
-            Vector3 closestPoint = Physics.ClosestPoint(impactPosition, collider, hittedEnemy.position, hittedEnemy.rotation);
-
-            float damagePercent = 1 - (Vector3.Distance(closestPoint, transform.position)/explosionRadius);
-            int damage = (int)(_minDamage + deltaDamage * damagePercent);
-
-            if (hittedHealth)
+            
+            if(_penetrationLevel >= hittedHealth.GetArmor())
             {
-                hittedHealth.TakeDamage(damage);
+                Vector3 closestPoint = Physics.ClosestPoint(impactPosition, collider, hittedEnemy.position, hittedEnemy.rotation);
+
+                float damagePercent = 1 - (Vector3.Distance(closestPoint, transform.position) / explosionRadius);
+                int damage = (int)(_minDamage + deltaDamage * damagePercent);
+
+                if (hittedHealth)
+                {
+                    hittedHealth.TakeDamage(damage);
+                }
             }
         }
 

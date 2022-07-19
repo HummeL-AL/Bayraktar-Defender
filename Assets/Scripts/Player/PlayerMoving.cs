@@ -1,9 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerMoving : MonoBehaviour
 {
+    public UnityEvent OnMove;
+
     [SerializeField] private float _minSpeed = 1f;
     [SerializeField] private float _maxSpeed = 3f;
     [SerializeField] private float _accelerationSpeed = 0.5f;
@@ -11,6 +14,11 @@ public class PlayerMoving : MonoBehaviour
 
     [SerializeField] AudioSource _audioSource = null;
     [SerializeField] Vector2 _minMaxVolume = Vector2.one;
+
+    public float GetSpeed()
+    {
+        return _speed;
+    }
 
     public void OnMoving(InputAction.CallbackContext context)
     {
@@ -45,5 +53,6 @@ public class PlayerMoving : MonoBehaviour
 
         float volumePercent = (_speed - _minSpeed) / (_maxSpeed - _minSpeed);
         _audioSource.volume = _minMaxVolume.x + (_minMaxVolume.y - _minMaxVolume.x) * volumePercent;
+        OnMove.Invoke();
     }
 }
