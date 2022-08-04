@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Level_0.unity
+    path: Assets/Joicy/Scenes/Level_0.unity
     guid: 2530e21dc5ca8b14a9fbaa80f67d1efc
   m_configObjects: {}
