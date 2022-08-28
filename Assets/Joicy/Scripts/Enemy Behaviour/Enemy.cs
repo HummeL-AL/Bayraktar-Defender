@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyEventChannel spawnChannel = null;
     [SerializeField] private EnemyEventChannel deathChannel = null;
 
-    [SerializeField] private int reward = 100;
+    [SerializeField] private int reward = 100; 
 
     public virtual void Awake()
     {
@@ -17,8 +17,8 @@ public class Enemy : MonoBehaviour
 
     public virtual void Death()
     {
-        deathChannel.RaiseEvent(this);
         Destroy(gameObject);
+        deathChannel.RaiseEvent(this);
     }
 
     public virtual int GetReward()

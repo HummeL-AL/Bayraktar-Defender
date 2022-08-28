@@ -13,28 +13,28 @@ public class Tab : MonoBehaviour
     {
         if (!gameObject.activeSelf)
         {
-            if (OpenAvailable())
-            {
-                OpenTab();
-                OnTabOpen.Invoke();
-            }
+            OpenTab();
         }
         else
         {
             CloseTab();
-            OnTabClosed.Invoke();
         }
     }
 
-    private void OpenTab()
+    public void OpenTab()
     {
-        gameObject.SetActive(true);
+        if (OpenAvailable())
+        {
+            gameObject.SetActive(true);
+            OnTabOpen.Invoke();
+        }
     }
 
-    private void CloseTab()
+    public void CloseTab()
     {
         CloseChilds();
         gameObject.SetActive(false);
+        OnTabClosed.Invoke();
     }
 
     private bool OpenAvailable()

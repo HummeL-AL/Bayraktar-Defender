@@ -17,9 +17,14 @@ public class Sight : MonoBehaviour
 
     private void UpdateSight()
     {
-        float heat = playerWeapon.GetCurrentWeapon().GetHeat();
+        float heat = playerWeapon.CurrentWeapon.Heat;
         float targetSize = Mathf.Lerp(minMaxSize.x, minMaxSize.y, heat);
         _rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, targetSize);
         _rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, targetSize);
+    }
+
+    private void OnDestroy()
+    {
+        weaponStatsChangedChannel.ChannelEvent -= UpdateSight;
     }
 }

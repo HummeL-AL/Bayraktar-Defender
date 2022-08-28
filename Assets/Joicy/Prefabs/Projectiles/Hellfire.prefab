@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3945047716014387724}
   - component: {fileID: 7531290096007576785}
   - component: {fileID: 5978740015874234527}
-  - component: {fileID: 7958845396378718931}
+  - component: {fileID: 3948446538831393925}
   m_Layer: 0
   m_Name: Flame
   m_TagString: Untagged
@@ -84,20 +84,102 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7958845396378718931
-CapsuleCollider:
+--- !u!82 &3948446538831393925
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4558781844327031618}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ab191fc9e3781e14382aff7c727668d2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6264168474997789210
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,9 +192,13 @@ GameObject:
   - component: {fileID: 2606425727711510379}
   - component: {fileID: 761533067474068402}
   - component: {fileID: 8663600828729951549}
-  - component: {fileID: 1594586408872916720}
   - component: {fileID: 8376822300649379492}
+  - component: {fileID: 1594586408872916720}
   - component: {fileID: 5393326479037638112}
+  - component: {fileID: 3201412252871986749}
+  - component: {fileID: -4867697064003819781}
+  - component: {fileID: -6070956933776820191}
+  - component: {fileID: -4790652655021619011}
   m_Layer: 7
   m_Name: Hellfire
   m_TagString: Untagged
@@ -263,70 +349,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &1594586408872916720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6264168474997789210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c7ff45766ba3846b0639d73f6bdb51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnFuelBurnout:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4558781844327031618}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4820490041750041130}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5393326479037638112}
-        m_TargetAssemblyTypeName: Controllable, Assembly-CSharp
-        m_MethodName: SetControllable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2606425727711510379}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _vfx: {fileID: 4372943084413851790}
 --- !u!114 &8376822300649379492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +395,46 @@ MonoBehaviour:
   m_DefaultActionMap: Correctable
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1594586408872916720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264168474997789210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c7ff45766ba3846b0639d73f6bdb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4790652655021619011}
+        m_TargetAssemblyTypeName: ObjectDetacher, Assembly-CSharp
+        m_MethodName: Detach
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -4867697064003819781}
+        m_TargetAssemblyTypeName: Explosive, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  selfDestroyTime: 10
 --- !u!114 &5393326479037638112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +447,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a91eaa5235b52418a62ca7b334bb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3201412252871986749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264168474997789210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476e134562574744b9070fc71b2168c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &-4867697064003819781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264168474997789210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78cc1cf448e21144844dd2d651149ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penetrationLevel: 0
+  minDamage: 0
+  maxDamage: 0
+  explosionRadius: 0
+  soundEffects: []
+  visualEffects: []
+  projector: {fileID: 0}
+--- !u!114 &-6070956933776820191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264168474997789210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101898534006a5c4b9a95d1caaaf0e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  timer: 1
+  reapeatable: 0
+  repeatTime: 0
+--- !u!114 &-4790652655021619011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264168474997789210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abb32d48c868b244b7112a38a73c39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDetach:
+  - {fileID: 4299929558577189104}
 --- !u!1001 &1419130931746419084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -447,16 +573,6 @@ PrefabInstance:
 --- !u!4 &4299929558577189104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890659184698827132, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
-  m_PrefabInstance: {fileID: 1419130931746419084}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4372943084413851790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3395173714541586690, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
-  m_PrefabInstance: {fileID: 1419130931746419084}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4820490041750041130 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5860333442227635110, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
   m_PrefabInstance: {fileID: 1419130931746419084}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6264168473059548621

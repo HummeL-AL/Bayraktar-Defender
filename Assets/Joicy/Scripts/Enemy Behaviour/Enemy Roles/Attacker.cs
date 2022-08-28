@@ -1,13 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
 public class Attacker : EnemyRole
 {
-    [SerializeField] IntEventChannel attackChannel = null;
-
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private int minDamage = 1;
     [SerializeField] private int maxDamage = 3;
+
+    [Inject] private City city = null;
+    private Health cityHealth = null;
+
+    private void Awake()
+    {
+        cityHealth = city.GetComponent<Health>();
+    }
 
     private void Start()
     {
@@ -18,7 +25,7 @@ public class Attacker : EnemyRole
     {
         while (true)
         {
-            attackChannel.RaiseEvent(GetDamage());
+            cityHealth.TakeDamage(GetDamage());
             yield return new WaitForSeconds(attackCooldown);
         }
     }

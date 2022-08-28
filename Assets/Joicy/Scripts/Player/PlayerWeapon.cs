@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,22 +8,20 @@ public class PlayerWeapon : MonoBehaviour
 {
     [SerializeField] private VoidEventChannel weaponSwitchedChannel = null;
 
-    [SerializeField] private Weapon[] _weapons = null;
-    [SerializeField] private Weapon _choosedWeapon = null;
+    [SerializeField] private List<Weapon> _weapons = null;
 
-    public Weapon GetCurrentWeapon()
+    private Weapon _choosedWeapon = null;
+    public Weapon CurrentWeapon { get => _choosedWeapon; }
+
+    public void SetWeapon(int index)
     {
-        return _choosedWeapon;
+        _choosedWeapon = _weapons[index];
+        weaponSwitchedChannel.RaiseEvent();
     }
 
-    public Weapon GetWeapon(int id)
+    public void AddWeapon(Weapon weapon)
     {
-        return _weapons[id];
-    }
-
-    public int GetWeaponCount()
-    {
-        return _weapons.Length;
+        _weapons.Add(weapon);
     }
 
     public void OnLeftMouseButton(InputAction.CallbackContext context)
@@ -58,10 +57,10 @@ public class PlayerWeapon : MonoBehaviour
         while (true)
         {
             float waitTime = 0f;
-            if (_choosedWeapon.IsAbleToShoot())
+            if (_choosedWeapon.IsAbleToShoot)
             {
                 _choosedWeapon.Shoot(Utility.GetCameraLookingPoint());
-                WeaponStats weaponStats = _choosedWeapon.GetWeaponData().GetWeaponStats(_choosedWeapon.GetCurrentLevel());
+                WeaponStats weaponStats = _choosedWeapon.WeaponStats;
                 waitTime = weaponStats.ShootingStats.ShotDelay;
             }
             yield return new WaitForSeconds(waitTime);
@@ -70,8 +69,8 @@ public class PlayerWeapon : MonoBehaviour
 
     private void ChooseNextWeapon()
     {
-        int nextID = Array.IndexOf(_weapons, _choosedWeapon) + 1;
-        int maxID = _weapons.Length - 1;
+        int nextID = _weapons.IndexOf(_choosedWeapon) + 1;
+        int maxID = _weapons.Count - 1;
 
         if (nextID > maxID)
         {
@@ -87,8 +86,8 @@ public class PlayerWeapon : MonoBehaviour
 
     private void ChoosePreviousWeapon()
     {
-        int prevID = Array.IndexOf(_weapons, _choosedWeapon) - 1;
-        int maxID = _weapons.Length - 1;
+        int prevID = _weapons.IndexOf(_choosedWeapon) - 1;
+        int maxID = _weapons.Count - 1;
 
         if (prevID < 0)
         {

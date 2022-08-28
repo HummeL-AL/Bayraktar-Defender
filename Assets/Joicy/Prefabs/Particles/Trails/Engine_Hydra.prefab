@@ -868,7 +868,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1331,7 +1331,7 @@ ParticleSystem:
         ctime5: 65535
         ctime6: 0
         ctime7: 0
-        atime0: 45875
+        atime0: 32768
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -2633,7 +2633,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxis: 0
     inWorldSpace: 0
-    multiplyDragByParticleSize: 1
+    multiplyDragByParticleSize: 0
     multiplyDragByParticleVelocity: 1
     dampen: 0
     drag:

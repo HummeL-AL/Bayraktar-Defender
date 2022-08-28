@@ -1,13 +1,29 @@
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private LevelStats stats = null;
     [SerializeField] private Vector2 minMaxSpawnDistance = Vector2.one;
     [SerializeField] private float spawnRadius = 0.5f;
     [SerializeField] private float spawnCooldown = 0.1f;
-    [SerializeField] private Wave[] waves = null;
+
+    [Inject] private DiContainer container = null;
+    [Inject] private Level levelSettings = null;
+    [Inject] private LevelStats stats = null;
+
+    private Wave[] waves = null;
+
+    private void Awake()
+    {
+        waves = levelSettings.Waves;
+        stats.SetMaxWave(waves.Length);
+    }
+
+    private void Start()
+    {
+        
+    }
 
     private void Update()
     {
@@ -16,11 +32,11 @@ public class WaveSpawner : MonoBehaviour
 
     private void UpdateWave()
     {
-        if (stats.Wave < waves.Length)
+        if (stats.Wave < stats.MaxWave)
         {
             Wave wave = waves[stats.Wave];
 
-            if (Time.timeSinceLevelLoad > wave.GetSpawnTime())
+            if (Time.timeSinceLevelLoad > wave.SpawnTime)
             {
                 StartCoroutine(SpawnWave(wave));
                 stats.IncreaseWave();
@@ -30,12 +46,12 @@ public class WaveSpawner : MonoBehaviour
 
     private IEnumerator SpawnWave(Wave wave)
     {
-        Enemy[] enemies = wave.GetEnemies();
+        Enemy[] enemies = wave.Enemies;
         Vector2 spawnCenter = GetSpawnCenter();
 
         for (int enemyTypeIndex = 0; enemyTypeIndex < enemies.Length; enemyTypeIndex++)
         {
-            for (int enemyIndex = 0; enemyIndex < wave.GetEnemiesCount()[enemyTypeIndex]; enemyIndex++)
+            for (int enemyIndex = 0; enemyIndex < wave.EnemiesCount[enemyTypeIndex]; enemyIndex++)
             {
                 Vector2 spawnOffset = Utility.FindPointInCircle(spawnRadius);
                 Vector3 spawnPoint = new Vector3(spawnCenter.x + spawnOffset.x, 0f, spawnCenter.y + spawnOffset.y);
@@ -49,7 +65,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void SpawnEnemy(Enemy enemy, Vector3 position)
     {
-        GameObject enemyObject = Instantiate(enemy.gameObject, position, Quaternion.identity);
+        GameObject enemyObject = container.InstantiatePrefab(enemy.gameObject, position, Quaternion.identity, null);
         enemyObject.transform.LookAt(Vector3.zero);
     }
 

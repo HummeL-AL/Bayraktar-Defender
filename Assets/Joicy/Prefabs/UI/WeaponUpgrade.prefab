@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 2742283656915286119}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: 480, y: 60}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2742283655306921428
 CanvasRenderer:
@@ -113,10 +113,10 @@ RectTransform:
   m_Father: {fileID: 2742283656696475570}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -80, y: 0}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 160, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2742283655335802584
 CanvasRenderer:
@@ -303,10 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a238b87e847bb947b6b62c5fbb5a7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrader: {fileID: 0}
-  weaponStatsChangedChannel: {fileID: 11400000, guid: ef88c67a52d9a0440acb58e896bc25a7, type: 2}
+  moneyChangedChannel: {fileID: 11400000, guid: 5f308906b322bf249a5c7ac15c8c2887, type: 2}
   icon: {fileID: 2742283656739939422}
-  name: {fileID: 2742283656903298792}
+  weaponName: {fileID: 2742283656903298792}
   level: {fileID: 2742283656960402119}
   description: {fileID: 2742283656401963549}
   price: {fileID: 2742283655508623458}
@@ -617,10 +616,10 @@ RectTransform:
   m_Father: {fileID: 2742283656915286119}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 480, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 0, y: -60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2742283656696475572
 CanvasRenderer:
@@ -688,7 +687,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2742283655463011315}
   m_RootOrder: -1
@@ -908,10 +907,10 @@ RectTransform:
   m_Father: {fileID: 2742283655463011315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 480, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 80, y: 0}
+  m_SizeDelta: {x: -160, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2742283656915286105
 CanvasRenderer:

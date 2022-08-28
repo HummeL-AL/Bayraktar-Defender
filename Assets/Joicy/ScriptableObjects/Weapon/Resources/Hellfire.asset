@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465eaa51f77cc6449fe607d312c6a4d, type: 3}
+  m_Name: Hellfire
+  m_EditorClassIdentifier: 
+  unlockedByDefault: 0
+  _weaponLevels:
+  - displayStats:
+      name: Hellfire
+      description: Powerful ATGM that allows to deliver democracy by your own hands.
+      icon: {fileID: 21300000, guid: 6d62cc2a662d50d42a717db138381d97, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0, y: 0}
+      _maxAmmo: 0
+      _overheatable: 0
+      _shotDelay: 0
+      _reloadTime: 0
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 0}
+    _projectileStats:
+      _projectile: {fileID: 0}
+      _penetrationLevel: 0
+      _minMaxDamage: {x: 0, y: 0}
+      _explosionRadius: 0
+      _speed: 0
+      _engineBurnTime: 0
+      selfDestroyTime: 0
+      _hitEffect: {fileID: 0}
+      _hitSound: {fileID: 0}
+      _landmark: {fileID: 0}
+      _sensivity: 0
+    _upgradeStats:
+      _price: 1000
+  - displayStats:
+      name: Hellfire
+      description: Powerful ATGM that allows to deliver democracy by your own hands.
+      icon: {fileID: 21300000, guid: 6d62cc2a662d50d42a717db138381d97, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0, y: 0}
+      _maxAmmo: 1
+      _overheatable: 0
+      _shotDelay: 0
+      _reloadTime: 10
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 250, y: 1100}
+      _explosionRadius: 2
+      _speed: 25
+      _engineBurnTime: 3
+      selfDestroyTime: 20
+      _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
+      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _sensivity: 15
+    _upgradeStats:
+      _price: 2500
+  - displayStats:
+      name: Hellfire
+      description: Powerful ATGM that allows to deliver democracy by your own hands.
+      icon: {fileID: 21300000, guid: 6d62cc2a662d50d42a717db138381d97, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0, y: 0}
+      _maxAmmo: 1
+      _overheatable: 0
+      _shotDelay: 0
+      _reloadTime: 8.5
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 300, y: 1500}
+      _explosionRadius: 2.5
+      _speed: 37.5
+      _engineBurnTime: 4
+      selfDestroyTime: 20
+      _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
+      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _sensivity: 30
+    _upgradeStats:
+      _price: 5000
+  - displayStats:
+      name: Hellfire
+      description: Powerful ATGM that allows to deliver democracy by your own hands.
+      icon: {fileID: 21300000, guid: 6d62cc2a662d50d42a717db138381d97, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0, y: 0}
+      _maxAmmo: 1
+      _overheatable: 0
+      _shotDelay: 0
+      _reloadTime: 7
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+    _projectileStats:
+      _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 500, y: 1500}
+      _explosionRadius: 3
+      _speed: 50
+      _engineBurnTime: 5
+      selfDestroyTime: 20
+      _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
+      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
+      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _sensivity: 45
+    _upgradeStats:
+      _price: 0

@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Joicy/Scenes/Level_0.unity
+    path: Assets/Joicy/Scenes/Main Menu.unity
+    guid: 2fbf19609182da64d8b37f49d9f5d3fa
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Operational Screen.unity
+    guid: d89f29d5254a00940bfc1741b771fca4
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_0.unity
     guid: 2530e21dc5ca8b14a9fbaa80f67d1efc
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_1.unity
+    guid: c947a356116bdfa46a13c6563f1e21a9
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_2.unity
+    guid: 8388f06801171e74a8d48ceb3ef104ba
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Testing/Levels/Level_3_0.unity
+    guid: 704df62b09513bd4f82e5f6a7ab78261
   m_configObjects: {}

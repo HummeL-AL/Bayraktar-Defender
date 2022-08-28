@@ -15,10 +15,7 @@ public class PlayerMoving : MonoBehaviour
     [SerializeField] AudioSource _audioSource = null;
     [SerializeField] Vector2 _minMaxVolume = Vector2.one;
 
-    public float GetSpeed()
-    {
-        return _speed;
-    }
+    public float Speed { get => _speed; }
 
     public void OnMoving(InputAction.CallbackContext context)
     {
@@ -33,9 +30,9 @@ public class PlayerMoving : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.Rotate(0f, -_speed * Time.deltaTime, 0f);
+        transform.parent.rotation *= Quaternion.Euler(0f, -_speed * Time.fixedDeltaTime, 0f);
     }
 
     private IEnumerator Accelerating(float delta)

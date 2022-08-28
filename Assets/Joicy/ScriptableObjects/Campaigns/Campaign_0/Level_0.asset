@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c930cba104a8774f9a5f1621c023b33, type: 3}
+  m_Name: Level_0
+  m_EditorClassIdentifier: 
+  levelName: Rabbit
+  levelScene: Level_0_0
+  victimsPenalty: 100
+  _waves:
+  - {fileID: 11400000, guid: 977428feca79dc349a65e476f10b7f7d, type: 2}
+  - {fileID: 11400000, guid: 5e6b16210a714f240a62095030ff8754, type: 2}
+  - {fileID: 11400000, guid: 214ed26d47db22c4a85741384bb679bd, type: 2}
+  - {fileID: 11400000, guid: 82be8b00de58f374dbfb97d750d98cab, type: 2}
+  - {fileID: 11400000, guid: a280546e029b9c44a8ad1b4fac6a11a0, type: 2}
+  - {fileID: 11400000, guid: 990a818f5775d974293e16b3bc2ebf66, type: 2}
+  - {fileID: 11400000, guid: bca3ca4fe8c31284db888a13d0bff327, type: 2}
+  - {fileID: 11400000, guid: d078d5917289d9c4e8aa4f7259b0d894, type: 2}
+  - {fileID: 11400000, guid: ff023a6f4142c044d82a24c8461f49f9, type: 2}
+  - {fileID: 11400000, guid: af70fda7e24efdd4d935f40824770355, type: 2}
