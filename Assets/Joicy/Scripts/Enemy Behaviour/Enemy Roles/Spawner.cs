@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Spawner : EnemyRole
+public class Spawner : MonoBehaviour, IEnemyRole
 {
     [SerializeField] private Enemy _spawnableEnemy = null;
     [SerializeField] private float _groupSpawnCooldown = 2f;
@@ -9,9 +9,15 @@ public class Spawner : EnemyRole
     [SerializeField] private int _groupCount = 2;
     [SerializeField] private int _groupSize = 5;
 
-    private void Start()
+    public void Activate()
     {
+        enabled = true;
         StartCoroutine(SpawnEnemyGroup());
+    }
+
+    public void Deactivate()
+    {
+        enabled = false;
     }
 
     private void SpawnEnemy(Enemy enemy)

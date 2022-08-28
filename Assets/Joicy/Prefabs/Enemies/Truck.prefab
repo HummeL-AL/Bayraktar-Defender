@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7707273566181730445}
   - component: {fileID: 8798939116654951375}
-  - component: {fileID: -2558097108203002265}
+  - component: {fileID: 7978126254173838378}
   - component: {fileID: 659545793037309249}
   - component: {fileID: -9079052286795651081}
   - component: {fileID: -7319051810842137179}
@@ -50,7 +50,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 1.5, z: 3.75}
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &-2558097108203002265
+--- !u!114 &7978126254173838378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,12 +59,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1603250761721284076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d79cfaf67fe49418b70b37559211ee, type: 3}
+  m_Script: {fileID: 11500000, guid: da7906f42c64fd941bd71e8db5ef3b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnChannel: {fileID: 11400000, guid: 94d319e244a56c74ebfc8c7eec41ae5a, type: 2}
   deathChannel: {fileID: 11400000, guid: efbfc468b97849f4ca3f00749cd127b1, type: 2}
   reward: 100
+  corpse: {fileID: 0}
 --- !u!114 &659545793037309249
 MonoBehaviour:
   m_ObjectHideFlags: 0

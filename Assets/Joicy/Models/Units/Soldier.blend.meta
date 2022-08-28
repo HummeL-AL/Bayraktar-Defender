@@ -2,11 +2,13 @@ fileFormatVersion: 2
 guid: c04c7f3b11a742c47acb16ba8e8da21c
 ModelImporter:
   serializedVersion: 22102
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: -623603649343465320
-    second: Scene
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -103,7 +105,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
+  importBlendShapeDeformPercent: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

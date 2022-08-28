@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-public class AntiAircraft : EnemyRole
+public class AntiAircraft : MonoBehaviour, IEnemyRole
 {
     [SerializeField] private Projectile projectile = null;
     [SerializeField] private WeaponData weaponData = null;
@@ -13,17 +13,24 @@ public class AntiAircraft : EnemyRole
     private Transform playerTransform = null;
     private PlayerMoving movement = null;
 
+    public void Activate()
+    {
+        enabled = true;
+        StartCoroutine(Attack());
+    }
+
+    public void Deactivate()
+    {
+        enabled = false;
+    }
+
     private void Awake()
     {
         playerTransform = player.transform;
         movement = player.GetComponent<PlayerMoving>();
     }
 
-    private void Start()
-    {
-        StartCoroutine(Attack());
-    }
-
+    //Should use better lead calculation method
     private IEnumerator Attack()
     {
         while (true)

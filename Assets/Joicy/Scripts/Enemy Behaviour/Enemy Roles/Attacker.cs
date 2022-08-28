@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-public class Attacker : EnemyRole
+public class Attacker : MonoBehaviour, IEnemyRole
 {
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private int minDamage = 1;
@@ -11,14 +11,20 @@ public class Attacker : EnemyRole
     [Inject] private City city = null;
     private Health cityHealth = null;
 
+    public void Activate()
+    {
+        enabled = true;
+        StartCoroutine(Attack());
+    }
+
+    public void Deactivate()
+    {
+        enabled = false;
+    }
+
     private void Awake()
     {
         cityHealth = city.GetComponent<Health>();
-    }
-
-    private void Start()
-    {
-        StartCoroutine(Attack());
     }
 
     private IEnumerator Attack()

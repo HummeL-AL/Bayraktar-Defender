@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5525237886084580177}
   - component: {fileID: 4412893007975662864}
-  - component: {fileID: 1255902389653261103}
+  - component: {fileID: 4439739792971911113}
   - component: {fileID: 2299893314244076423}
   - component: {fileID: -4445171855519396845}
   - component: {fileID: -2325047777032724638}
@@ -51,7 +51,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.9, z: 3.4}
   m_Center: {x: 0, y: 0.45, z: 0}
---- !u!114 &1255902389653261103
+--- !u!114 &4439739792971911113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,12 +60,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3444966618396988293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3477293aae894546924c4ce37255e5e, type: 3}
+  m_Script: {fileID: 11500000, guid: da7906f42c64fd941bd71e8db5ef3b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnChannel: {fileID: 11400000, guid: 94d319e244a56c74ebfc8c7eec41ae5a, type: 2}
   deathChannel: {fileID: 11400000, guid: efbfc468b97849f4ca3f00749cd127b1, type: 2}
   reward: 100
+  corpse: {fileID: 0}
 --- !u!114 &2299893314244076423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291f79693cec8d34fbde1e126b5564b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAttackChannel: {fileID: 11400000, guid: c4003efbe65f86542a71b42bdaee05df, type: 2}
   attackCooldown: 2
   minDamage: 1
   maxDamage: 3

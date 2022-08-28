@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnTime: 0
   _enemies:
-  - {fileID: 3580304689088744821, guid: 8177587e44c62904ca063e8e9608989b, type: 3}
+  - {fileID: 8110542376054170010, guid: 8177587e44c62904ca063e8e9608989b, type: 3}
   _enemiesCount: 01000000

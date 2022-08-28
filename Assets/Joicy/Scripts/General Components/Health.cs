@@ -18,12 +18,15 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        _healthPoints -= damage;
-        DamageTaken?.Invoke(damage);
-
-        if (_healthPoints <= 0)
+        if (_healthPoints > 0)
         {
-            Died?.Invoke();
+            _healthPoints -= damage;
+            DamageTaken?.Invoke(damage);
+
+            if (_healthPoints <= 0)
+            {
+                Died?.Invoke();
+            }
         }
     }
 }

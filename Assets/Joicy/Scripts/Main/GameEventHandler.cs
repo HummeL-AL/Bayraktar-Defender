@@ -39,7 +39,7 @@ public class GameEventHandler : MonoBehaviour
     private void OnEnemyDeath(Enemy diedEnemy)
     {
         levelStats.AddEnemies(-1);
-        levelStats.AddMoney(diedEnemy.GetReward());
+        levelStats.AddMoney(diedEnemy.Reward);
 
         enemiesCountChannel.RaiseEvent();
         CheckWinConditions();
