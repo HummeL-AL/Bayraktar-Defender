@@ -173,7 +173,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnTimerEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 154404268591757765}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8520760367907312694}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   timer: 1
   reapeatable: 0
   repeatTime: 0
@@ -284,7 +308,7 @@ AudioSource:
   m_GameObject: {fileID: 8520760367907312694}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8389866478250521290, guid: 0441ca432cd46a24994fa333ee783fdf, type: 2}
   m_audioClip: {fileID: 8300000, guid: ab191fc9e3781e14382aff7c727668d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -498,6 +522,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a1ee2a5563ad165499ddd5e875d37082, type: 3}
+--- !u!198 &154404268591757765 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5860333442227635110, guid: a1ee2a5563ad165499ddd5e875d37082, type: 3}
+  m_PrefabInstance: {fileID: 6012476933414402659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8893822962161195807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890659184698827132, guid: a1ee2a5563ad165499ddd5e875d37082, type: 3}

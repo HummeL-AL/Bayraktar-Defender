@@ -85,7 +85,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -4790652655021619011, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
+      - m_Target: {fileID: -4791626303666552629}
         m_TargetAssemblyTypeName: ObjectDetacher, Assembly-CSharp
         m_MethodName: Detach
         m_Mode: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -4867697064003819781, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
+      - m_Target: {fileID: -9077688445616711220}
         m_TargetAssemblyTypeName: Explosive, Assembly-CSharp
         m_MethodName: Explode
         m_Mode: 1
@@ -156,7 +156,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnTimerEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2464935797044351910}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8520760367907312694}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   timer: 1
   reapeatable: 0
   repeatTime: 0
@@ -267,7 +291,7 @@ AudioSource:
   m_GameObject: {fileID: 8520760367907312694}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8389866478250521290, guid: 0441ca432cd46a24994fa333ee783fdf, type: 2}
   m_audioClip: {fileID: 8300000, guid: ab191fc9e3781e14382aff7c727668d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -497,6 +521,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a5c22c40d3d0314e9beb7097721dfc8, type: 3}
+--- !u!198 &2464935797044351910 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5860333442227635110, guid: 4a5c22c40d3d0314e9beb7097721dfc8, type: 3}
+  m_PrefabInstance: {fileID: 8313961826247970816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6592301244303978876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890659184698827132, guid: 4a5c22c40d3d0314e9beb7097721dfc8, type: 3}

@@ -93,7 +93,7 @@ AudioSource:
   m_GameObject: {fileID: 4558781844327031618}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8389866478250521290, guid: 0441ca432cd46a24994fa333ee783fdf, type: 2}
   m_audioClip: {fileID: 8300000, guid: ab191fc9e3781e14382aff7c727668d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 2606425727711510379}
   - component: {fileID: 761533067474068402}
   - component: {fileID: 8663600828729951549}
-  - component: {fileID: 8376822300649379492}
   - component: {fileID: 1594586408872916720}
   - component: {fileID: 5393326479037638112}
   - component: {fileID: 3201412252871986749}
@@ -349,52 +348,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &8376822300649379492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6264168474997789210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 537e59c2933c62847941c1c3331812d7, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5393326479037638112}
-        m_TargetAssemblyTypeName: Controllable, Assembly-CSharp
-        m_MethodName: OnCorrection
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: bc6304d1-a4a1-41f9-8f93-1965095a9bb8
-    m_ActionName: Correctable/ProjectileCorrection[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Correctable
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1594586408872916720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +446,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnTimerEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5393326479037638112}
+        m_TargetAssemblyTypeName: Controllable, Assembly-CSharp
+        m_MethodName: SetControllable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4820490041750041130}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4558781844327031618}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   timer: 1
   reapeatable: 0
   repeatTime: 0
@@ -573,6 +562,11 @@ PrefabInstance:
 --- !u!4 &4299929558577189104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890659184698827132, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
+  m_PrefabInstance: {fileID: 1419130931746419084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4820490041750041130 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5860333442227635110, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
   m_PrefabInstance: {fileID: 1419130931746419084}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6264168473059548621

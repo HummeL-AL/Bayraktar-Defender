@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9962518ae6ff124f984a86c8eb88010, type: 3}
+  m_Name: ZoomUpgrade
+  m_EditorClassIdentifier: Assembly-CSharp::ZoomUpgrade
+  unlockedByDefault: 0
+  upgrades:
+  - upgradeName: Common Optics
+    description: Allow you see enemies around the city.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minZoom: 35
+    maxZoom: 55
+    price: 500
+  - upgradeName: 4x Optics
+    description: Good econom variant.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minZoom: 27.5
+    maxZoom: 60
+    price: 1000
+  - upgradeName: 8x Optics
+    description: Not as good as telescope is, but can give troubles to your enemies.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minZoom: 20
+    maxZoom: 60
+    price: 2000
+  - upgradeName: 12x Optics
+    description: Your targets can't leave from your sight.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minZoom: 12.5
+    maxZoom: 65
+    price: 3000
+  - upgradeName: 16x Optics
+    description: Eagle`s eye.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minZoom: 5
+    maxZoom: 70
+    price: 3000

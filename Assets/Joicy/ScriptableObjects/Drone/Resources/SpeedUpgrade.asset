@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93acc5edbafa31498e9ddb1e14b78e3, type: 3}
+  m_Name: SpeedUpgrade
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedUpgrade
+  unlockedByDefault: 0
+  upgrades:
+  - upgradeName: V6 300HP
+    description: That thing allow your drone to fly, nothing more.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minSpeed: 1.5
+    maxSpeed: 3
+    acceleration: 1
+    price: 500
+  - upgradeName: V6 600HP
+    description: Reliable and powerful motor, that`s definitely good variant.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minSpeed: 2
+    maxSpeed: 5
+    acceleration: 1.5
+    price: 1000
+  - upgradeName: V8 1200HP
+    description: This monster allows you fly really fast.
+    icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    minSpeed: 2.5
+    maxSpeed: 7.5
+    acceleration: 2
+    price: 1500

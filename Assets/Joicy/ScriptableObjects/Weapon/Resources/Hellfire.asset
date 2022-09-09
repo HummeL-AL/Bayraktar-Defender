@@ -53,18 +53,18 @@ MonoBehaviour:
       _reloadTime: 10
       _shotHeat: 0
       _coolingSpeed: 0
-      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+      _shootSound: {fileID: 11400000, guid: d9753be31d24b6541adc03fdf99225d7, type: 2}
     _projectileStats:
       _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
-      _penetrationLevel: 2
+      _penetrationLevel: 3
       _minMaxDamage: {x: 250, y: 1100}
-      _explosionRadius: 2
+      _explosionRadius: 1.5
       _speed: 25
       _engineBurnTime: 3
       selfDestroyTime: 20
       _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
-      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
-      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _hitSound: {fileID: 11400000, guid: f1e269d39da26ea4aaa8f79f9ce48caf, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
       _sensivity: 15
     _upgradeStats:
       _price: 2500
@@ -80,18 +80,18 @@ MonoBehaviour:
       _reloadTime: 8.5
       _shotHeat: 0
       _coolingSpeed: 0
-      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+      _shootSound: {fileID: 11400000, guid: d9753be31d24b6541adc03fdf99225d7, type: 2}
     _projectileStats:
       _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
-      _penetrationLevel: 2
+      _penetrationLevel: 3
       _minMaxDamage: {x: 300, y: 1500}
-      _explosionRadius: 2.5
+      _explosionRadius: 1.75
       _speed: 37.5
       _engineBurnTime: 4
       selfDestroyTime: 20
       _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
-      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
-      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _hitSound: {fileID: 11400000, guid: f1e269d39da26ea4aaa8f79f9ce48caf, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
       _sensivity: 30
     _upgradeStats:
       _price: 5000
@@ -107,18 +107,18 @@ MonoBehaviour:
       _reloadTime: 7
       _shotHeat: 0
       _coolingSpeed: 0
-      _shootSound: {fileID: 8300000, guid: ecb67ce0bd1db0944b46019eb8929c3b, type: 3}
+      _shootSound: {fileID: 11400000, guid: d9753be31d24b6541adc03fdf99225d7, type: 2}
     _projectileStats:
       _projectile: {fileID: 1594586408872916720, guid: e6ea6b9a243ba594682d0ee24f489bbf, type: 3}
-      _penetrationLevel: 2
+      _penetrationLevel: 3
       _minMaxDamage: {x: 500, y: 1500}
-      _explosionRadius: 3
+      _explosionRadius: 2
       _speed: 50
       _engineBurnTime: 5
       selfDestroyTime: 20
       _hitEffect: {fileID: 8611908471861341769, guid: f60aaf56877c0e540a1d7af29ef311bf, type: 3}
-      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
-      _landmark: {fileID: 3816955153502693378, guid: f5163e1b0748e084fb7af7ac730c27b4, type: 3}
+      _hitSound: {fileID: 11400000, guid: f1e269d39da26ea4aaa8f79f9ce48caf, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
       _sensivity: 45
     _upgradeStats:
       _price: 0

@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465eaa51f77cc6449fe607d312c6a4d, type: 3}
+  m_Name: Auto-Cannon
+  m_EditorClassIdentifier: 
+  unlockedByDefault: 1
+  _weaponLevels:
+  - displayStats:
+      name: Auto-Cannon
+      description: Very high precise and AP rounds can be dangerous even for armored
+        targets.
+      icon: {fileID: 21300000, guid: d45b7f7b5d76bcc4999f0593aa4f2446, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0, y: 0}
+      _maxAmmo: 0
+      _overheatable: 0
+      _shotDelay: 0
+      _reloadTime: 0
+      _shotHeat: 0
+      _coolingSpeed: 0
+      _shootSound: {fileID: 0}
+    _projectileStats:
+      _projectile: {fileID: 0}
+      _penetrationLevel: 0
+      _minMaxDamage: {x: 0, y: 0}
+      _explosionRadius: 0
+      _speed: 0
+      _engineBurnTime: 0
+      selfDestroyTime: 0
+      _hitEffect: {fileID: 0}
+      _hitSound: {fileID: 0}
+      _landmark: {fileID: 0}
+      _sensivity: 0
+    _upgradeStats:
+      _price: 0
+  - displayStats:
+      name: Auto-Cannon
+      description: Very high precise and AP rounds can be dangerous even for armored
+        targets.
+      icon: {fileID: 21300000, guid: d45b7f7b5d76bcc4999f0593aa4f2446, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0.5, y: 0.75}
+      _maxAmmo: 5
+      _overheatable: 1
+      _shotDelay: 0.75
+      _reloadTime: 5
+      _shotHeat: 0.2
+      _coolingSpeed: 0.075
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
+    _projectileStats:
+      _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 0, y: 150}
+      _explosionRadius: 1
+      _speed: 250
+      _engineBurnTime: 0
+      selfDestroyTime: 10
+      _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
+      _hitSound: {fileID: 11400000, guid: 6bc927b97b0405142a73728c7fb19ca0, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
+      _sensivity: 0
+    _upgradeStats:
+      _price: 750
+  - displayStats:
+      name: Auto-Cannon
+      description: Very high precise and AP rounds can be dangerous even for armored
+        targets.
+      icon: {fileID: 21300000, guid: d45b7f7b5d76bcc4999f0593aa4f2446, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0.25, y: 0.75}
+      _maxAmmo: 7
+      _overheatable: 1
+      _shotDelay: 0.625
+      _reloadTime: 5
+      _shotHeat: 0.2
+      _coolingSpeed: 0.075
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
+    _projectileStats:
+      _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 0, y: 150}
+      _explosionRadius: 1
+      _speed: 250
+      _engineBurnTime: 0
+      selfDestroyTime: 10
+      _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
+      _hitSound: {fileID: 11400000, guid: 6bc927b97b0405142a73728c7fb19ca0, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
+      _sensivity: 0
+    _upgradeStats:
+      _price: 1500
+  - displayStats:
+      name: Auto-Cannon
+      description: Very high precise and AP rounds can be dangerous even for armored
+        targets.
+      icon: {fileID: 21300000, guid: d45b7f7b5d76bcc4999f0593aa4f2446, type: 3}
+    _shootingStats:
+      _spreadAngle: {x: 0.25, y: 0.5}
+      _maxAmmo: 10
+      _overheatable: 1
+      _shotDelay: 0.5
+      _reloadTime: 6.5
+      _shotHeat: 0.2
+      _coolingSpeed: 0.075
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
+    _projectileStats:
+      _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
+      _penetrationLevel: 2
+      _minMaxDamage: {x: 0, y: 200}
+      _explosionRadius: 1
+      _speed: 250
+      _engineBurnTime: 0
+      selfDestroyTime: 10
+      _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
+      _hitSound: {fileID: 11400000, guid: 6bc927b97b0405142a73728c7fb19ca0, type: 2}
+      _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
+      _sensivity: 0
+    _upgradeStats:
+      _price: 2500

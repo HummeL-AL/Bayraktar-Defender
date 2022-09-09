@@ -17,6 +17,6 @@ public class EnemiesDisplay : MonoBehaviour
 
     private void UpdateValue()
     {
-        display.text = $"ENM:{_stats.Enemies}";
+        display.text = $"ENM:{_stats.EnemiesCount}";
     }
 }

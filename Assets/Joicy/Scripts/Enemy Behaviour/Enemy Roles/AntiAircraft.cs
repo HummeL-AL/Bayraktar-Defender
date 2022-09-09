@@ -2,30 +2,38 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-public class AntiAircraft : MonoBehaviour, IEnemyRole
+public class AntiAircraft : MonoBehaviour, IActivableRole
 {
     [SerializeField] private Projectile projectile = null;
     [SerializeField] private WeaponData weaponData = null;
     [SerializeField] private float attackCooldown = 1f;
 
+    [Inject] private DiContainer container = null;
     [Inject] private Player player = null;
 
     private Transform playerTransform = null;
     private PlayerMoving movement = null;
+    private IEnumerator attack = null;
 
     public void Activate()
     {
         enabled = true;
-        StartCoroutine(Attack());
+        StartCoroutine(attack);
     }
 
     public void Deactivate()
     {
         enabled = false;
+        StopCoroutine(attack);
+    }
+
+    public void SetDefault()
+    {
     }
 
     private void Awake()
     {
+        attack = Attack();
         playerTransform = player.transform;
         movement = player.GetComponent<PlayerMoving>();
     }
@@ -47,7 +55,7 @@ public class AntiAircraft : MonoBehaviour, IEnemyRole
             //}
 
             Quaternion targetRotation = Quaternion.LookRotation(Vector3.up, transform.up); //Quaternion.LookRotation(targetPosition - transform.position, transform.up);
-            Projectile createdProjectile = Instantiate(projectile, transform.position, targetRotation, null);
+            Projectile createdProjectile = container.InstantiatePrefab(projectile, transform.position, targetRotation, null).GetComponent<Projectile>();
             createdProjectile.SetStats(projectileStats);
 
             SelfGuidance selfGuidance = createdProjectile.GetComponent<SelfGuidance>();

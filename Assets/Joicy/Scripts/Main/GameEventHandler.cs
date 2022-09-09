@@ -31,14 +31,14 @@ public class GameEventHandler : MonoBehaviour
 
     private void OnEnemySpawn(Enemy enemy)
     {
-        levelStats.AddEnemies(1);
+        levelStats.AddEnemy(enemy);
 
         enemiesCountChannel.RaiseEvent();
     }
 
     private void OnEnemyDeath(Enemy diedEnemy)
     {
-        levelStats.AddEnemies(-1);
+        levelStats.RemoveEnemy(diedEnemy);
         levelStats.AddMoney(diedEnemy.Reward);
 
         enemiesCountChannel.RaiseEvent();
@@ -72,7 +72,7 @@ public class GameEventHandler : MonoBehaviour
 
     private void CheckWinConditions()
     {
-        if (levelStats.Enemies == 0 && levelStats.Wave == levelStats.MaxWave)
+        if (levelStats.EnemiesCount == 0 && levelStats.Wave == levelStats.MaxWave)
         {
             gameWonChannel.RaiseEvent();
         }

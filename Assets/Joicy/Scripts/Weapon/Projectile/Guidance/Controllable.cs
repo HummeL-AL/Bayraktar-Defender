@@ -1,30 +1,17 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class Controllable : MonoBehaviour, IProjectileComponent
+public class Controllable : MonoBehaviour, IProjectileDataReceiver
 {
+
     private bool _isControllable = true;
-    private float sensivity = 1f;
+    private float _sensitivity = 1f;
 
+    private ProjectileActionMap _actionMap = null;
     private Rigidbody _rigidbody = null;
-
-    public void OnCorrection(InputAction.CallbackContext context)
-    {
-        Vector2 delta = context.ReadValue<Vector2>();
-        if (delta != Vector2.zero)
-        {
-            StartCoroutine("Correction", delta);
-        }
-        else
-        {
-            StopCoroutine("Correction");
-        }
-    }
 
     public void SetStats(ProjectileStats projectileStats)
     {
-        sensivity = projectileStats.Sensivity;
+        _sensitivity = projectileStats.Sensivity;
     }
 
     public void SetControllable(bool isControllable)
@@ -34,26 +21,24 @@ public class Controllable : MonoBehaviour, IProjectileComponent
 
     private void Awake()
     {
+        _actionMap = new ProjectileActionMap();
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private IEnumerator Correction(Vector2 delta)
+    private void Update()
     {
-        while (true)
-        {
-            if (_isControllable)
-            {
-                ApplyCorrection(delta);
-            }
-            yield return new WaitForEndOfFrame();
-        }
+        ApplyCorrection(_actionMap.Correctable.ProjectileCorrection.ReadValue<Vector2>());
     }
 
     private void ApplyCorrection(Vector2 delta)
     {
-        Vector3 correction = new Vector3(delta.y * sensivity, delta.x * sensivity, 0f);
+        Debug.Log(delta);
+        if (delta != Vector2.one && !_isControllable)
+        {
+            Vector3 correction = new Vector3(delta.y * _sensitivity, delta.x * _sensitivity, 0f);
 
-        Quaternion correctionRotation = Quaternion.Euler(correction * Time.deltaTime);
-        _rigidbody.MoveRotation(transform.rotation * correctionRotation);
+            Quaternion correctionRotation = Quaternion.Euler(correction * Time.deltaTime);
+            _rigidbody.MoveRotation(transform.rotation * correctionRotation);
+        }
     }
 }

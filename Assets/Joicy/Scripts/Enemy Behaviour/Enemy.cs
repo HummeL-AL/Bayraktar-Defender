@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,8 +11,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private int reward = 100;
     [SerializeField] private float corpseTime = 10f;
-    [SerializeField] private GameObject[] models = new GameObject[2];
 
+    private List<Buff> buffs = new List<Buff>();
+    private IEnemyComponent[] enemyComponents = null;
     private EnemyState enemyState = EnemyState.Traveling;
 
     public void SetState(EnemyState state)
@@ -19,19 +22,59 @@ public class Enemy : MonoBehaviour
         UpdateState();
     }
 
+    public void AddBuff(string buffType)
+    {
+        Type buff = Type.GetType(buffType);
+
+        bool buffed = gameObject.TryGetComponent(buff, out Component component);
+        if (buffed)
+        {
+            Buff currentBuff = component as Buff;
+            currentBuff.Renovate();
+        }
+        else
+        {
+            component = gameObject.AddComponent(buff);
+            Buff currentBuff = component as Buff;
+            currentBuff.Activate();
+            buffs.Add(currentBuff);
+        }
+    }
+
     private void Awake()
     {
         spawnChannel.RaiseEvent(this);
+        GetEnemyComponents();
         SubscribeToEvents();
     }
 
-    private void SubscribeToEvents()
+    private void Update()
     {
-        Health health = GetComponent<Health>();
-        if (health) { health.Died += OnDeath; }
+        SetDefaultValues();
+        ApplyBuffs();
+    }
 
-        IEnemyMovement movement = GetComponent<IEnemyMovement>();
-        if (movement != null) { movement.TargetDistanceReached += OnTargetReached; }
+    private void SetDefaultValues()
+    {
+        foreach(IEnemyComponent enemyComponent in enemyComponents)
+        {
+            enemyComponent.SetDefault();
+        }
+    }
+
+    private void ApplyBuffs()
+    {
+        foreach (Buff buff in buffs)
+        {
+            if (buff)
+            {
+                buff.ApplyEffect();
+            }
+            else
+            {
+                buffs.Remove(buff);
+            }
+        }
     }
 
     private void UpdateState()
@@ -51,7 +94,6 @@ public class Enemy : MonoBehaviour
             case EnemyState.Dead:
                 {
                     ToggleAllComponents(false);
-                    SwitchModel();
                     break;
                 }
             default:
@@ -60,6 +102,20 @@ public class Enemy : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    private void SubscribeToEvents()
+    {
+        Health health = GetComponent<Health>();
+        if (health) { health.Died += OnDeath; }
+
+        IEnemyMovement movement = GetComponent<IEnemyMovement>();
+        if (movement != null) { movement.TargetDistanceReached += OnTargetReached; }
+    }
+
+    private void GetEnemyComponents()
+    {
+        enemyComponents = GetComponents<IEnemyComponent>();
     }
 
     private void OnTargetReached()
@@ -71,13 +127,17 @@ public class Enemy : MonoBehaviour
     {
         SetState(EnemyState.Dead);
         Destroy(gameObject, corpseTime);
-        deathChannel.RaiseEvent(this);
-    }
 
-    private void SwitchModel()
-    {
-        models[0].SetActive(!models[0].activeSelf);
-        models[1].SetActive(!models[1].activeSelf);
+        if (UnityEngine.Random.value >= 0.5)
+        {
+            Vector3 scale = Vector3.one;
+            scale.x = -1;
+            transform.localScale = scale;
+        }
+
+        transform.Rotate(Vector3.up, UnityEngine.Random.Range(0f, 360f));
+
+        deathChannel.RaiseEvent(this);
     }
 
     private void ToggleMovement(bool toggleMode)

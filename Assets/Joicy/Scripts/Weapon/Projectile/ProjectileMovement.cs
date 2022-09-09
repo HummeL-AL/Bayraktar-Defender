@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
-public class ProjectileMovement : MonoBehaviour, IProjectileComponent
+public class ProjectileMovement : MonoBehaviour, IProjectileDataReceiver
 {
-    public delegate void CollisionDelegate();
+    public delegate void CollisionDelegate(RaycastHit hit);
     public CollisionDelegate ObstacleDetected;
 
     [SerializeField] private float speed = 0;
@@ -21,8 +22,8 @@ public class ProjectileMovement : MonoBehaviour, IProjectileComponent
 
     private void FixedUpdate()
     {
+        StartCoroutine(CheckHit());
         Move();
-        CheckHit();
     }
 
     private void Move()
@@ -30,13 +31,15 @@ public class ProjectileMovement : MonoBehaviour, IProjectileComponent
         rigidbody.MovePosition(transform.position + transform.forward * speed * Time.fixedDeltaTime);
     }
 
-    private void CheckHit()
+    private IEnumerator CheckHit()
     {
         Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, speed * Time.fixedDeltaTime, 1 << 6 | 1 << 8);
 
         if (hit.collider)
         {
-            ObstacleDetected.Invoke();
+            yield return new WaitForFixedUpdate();
+            transform.position = hit.point;
+            ObstacleDetected.Invoke(hit);
         }
     }
 }

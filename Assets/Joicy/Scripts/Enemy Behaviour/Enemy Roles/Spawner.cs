@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
-public class Spawner : MonoBehaviour, IEnemyRole
+public class Spawner : MonoBehaviour, IActivableRole
 {
     [SerializeField] private Enemy _spawnableEnemy = null;
     [SerializeField] private float _groupSpawnCooldown = 2f;
@@ -9,20 +10,34 @@ public class Spawner : MonoBehaviour, IEnemyRole
     [SerializeField] private int _groupCount = 2;
     [SerializeField] private int _groupSize = 5;
 
+    [Inject] private DiContainer container = null;
+
+    private IEnumerator spawn = null;
+
     public void Activate()
     {
         enabled = true;
-        StartCoroutine(SpawnEnemyGroup());
+        StartCoroutine(spawn);
     }
 
     public void Deactivate()
     {
         enabled = false;
+        StopCoroutine(spawn);
+    }
+
+    public void SetDefault()
+    {
+    }
+
+    private void Awake()
+    {
+        spawn = SpawnEnemyGroup();
     }
 
     private void SpawnEnemy(Enemy enemy)
     {
-        GameObject enemyObject = Instantiate(enemy.gameObject, transform.position - 3 * transform.forward, Quaternion.identity);
+        GameObject enemyObject = container.InstantiatePrefab(enemy.gameObject, transform.position - 3 * transform.forward, Quaternion.identity, null);
         enemyObject.transform.LookAt(Vector3.zero);
     }
 

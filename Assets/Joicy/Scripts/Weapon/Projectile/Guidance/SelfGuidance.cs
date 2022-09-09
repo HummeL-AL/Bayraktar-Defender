@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SelfGuidance : MonoBehaviour, IProjectileComponent
+public class SelfGuidance : MonoBehaviour, IProjectileDataReceiver
 {
     public Transform Target = null;
     public float LeadDistance = 0f;

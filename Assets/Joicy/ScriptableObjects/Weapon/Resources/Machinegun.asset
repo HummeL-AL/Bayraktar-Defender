@@ -38,91 +38,87 @@ MonoBehaviour:
       _hitEffect: {fileID: 0}
       _hitSound: {fileID: 0}
       _landmark: {fileID: 0}
+      _sensivity: 0
     _upgradeStats:
       _price: 0
-    _controllableStats:
-      _sensivity: {x: 0, y: 0}
   - displayStats:
       name: Machinegun
       description: High fire rate of this thing can change result of the battle.
       icon: {fileID: 21300000, guid: 435dd3df9bcd9d14cb73db8b17f68a47, type: 3}
     _shootingStats:
       _spreadAngle: {x: 0.5, y: 1.5}
-      _maxAmmo: 150
+      _maxAmmo: 50
       _overheatable: 1
       _shotDelay: 0.15
       _reloadTime: 4
       _shotHeat: 0.02
       _coolingSpeed: 0.1
-      _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
       _penetrationLevel: 0
       _minMaxDamage: {x: 50, y: 100}
-      _explosionRadius: 1
+      _explosionRadius: 0.5
       _speed: 150
       _engineBurnTime: 0
       selfDestroyTime: 10
       _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
-      _hitSound: {fileID: 8300000, guid: 4c2e1ec7dbaa34343941daa17576770d, type: 3}
+      _hitSound: {fileID: 11400000, guid: 50facaa6fd487ec46a96125fc513fe4d, type: 2}
       _landmark: {fileID: 0}
+      _sensivity: 0
     _upgradeStats:
       _price: 1000
-    _controllableStats:
-      _sensivity: {x: 0, y: 0}
   - displayStats:
       name: Machinegun
       description: High fire rate of this thing can change result of the battle.
       icon: {fileID: 21300000, guid: 435dd3df9bcd9d14cb73db8b17f68a47, type: 3}
     _shootingStats:
       _spreadAngle: {x: 0.5, y: 1.25}
-      _maxAmmo: 200
-      _overheatable: 0
+      _maxAmmo: 100
+      _overheatable: 1
       _shotDelay: 0.125
       _reloadTime: 4
       _shotHeat: 0.02
-      _coolingSpeed: 0.15
-      _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
+      _coolingSpeed: 0.1
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
       _penetrationLevel: 0
       _minMaxDamage: {x: 50, y: 150}
-      _explosionRadius: 1
+      _explosionRadius: 0.5
       _speed: 175
       _engineBurnTime: 0
       selfDestroyTime: 10
       _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
-      _hitSound: {fileID: 8300000, guid: 4c2e1ec7dbaa34343941daa17576770d, type: 3}
+      _hitSound: {fileID: 11400000, guid: 50facaa6fd487ec46a96125fc513fe4d, type: 2}
       _landmark: {fileID: 0}
+      _sensivity: 0
     _upgradeStats:
       _price: 2500
-    _controllableStats:
-      _sensivity: {x: 0, y: 0}
   - displayStats:
       name: Machinegun
       description: High fire rate of this thing can change result of the battle.
       icon: {fileID: 21300000, guid: 435dd3df9bcd9d14cb73db8b17f68a47, type: 3}
     _shootingStats:
       _spreadAngle: {x: 0.5, y: 1}
-      _maxAmmo: 250
-      _overheatable: 0
+      _maxAmmo: 150
+      _overheatable: 1
       _shotDelay: 0.075
       _reloadTime: 5
       _shotHeat: 0.02
-      _coolingSpeed: 0.2
-      _shootSound: {fileID: 8300000, guid: a6444dc6b923b724eb384509d907526d, type: 3}
+      _coolingSpeed: 0.1
+      _shootSound: {fileID: 11400000, guid: 2410eacab82899b46963b747347233f1, type: 2}
     _projectileStats:
       _projectile: {fileID: 2763341643245505837, guid: d30d7932fdbc3b848a9b2c2b5e196bc7, type: 3}
       _penetrationLevel: 0
       _minMaxDamage: {x: 75, y: 150}
-      _explosionRadius: 1
+      _explosionRadius: 0.5
       _speed: 200
       _engineBurnTime: 0
       selfDestroyTime: 10
       _hitEffect: {fileID: 3078064413373680228, guid: 3de5e36db09fcab44b2b71e97404b81c, type: 3}
-      _hitSound: {fileID: 8300000, guid: 4c2e1ec7dbaa34343941daa17576770d, type: 3}
+      _hitSound: {fileID: 11400000, guid: 50facaa6fd487ec46a96125fc513fe4d, type: 2}
       _landmark: {fileID: 0}
+      _sensivity: 0
     _upgradeStats:
       _price: 0
-    _controllableStats:
-      _sensivity: {x: 0, y: 0}

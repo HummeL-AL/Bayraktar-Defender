@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(PlayerHealth))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private VoidEventChannel gameLostChannel = null;

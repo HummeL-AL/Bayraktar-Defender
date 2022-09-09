@@ -3,7 +3,7 @@ using Zenject;
 
 public class WeaponDisplay : MonoBehaviour
 {
-    [SerializeField] private WeaponUpgrade _prefab = null;
+    [SerializeField] private WeaponUpgradeButton _prefab = null;
 
     [Inject] DiContainer container = null;
     [Inject] private ResourcesLoader resourcesLoader = null;
@@ -18,7 +18,7 @@ public class WeaponDisplay : MonoBehaviour
     {
         for (int i = 0; i < resourcesLoader.Weapons.Length; i++)
         {
-            WeaponUpgrade upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<WeaponUpgrade>();
+            WeaponUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<WeaponUpgradeButton>();
             upgrade.SetWeapon(resourcesLoader.Weapons[i]);
             upgrade.UpdateWeaponInfo();
         }

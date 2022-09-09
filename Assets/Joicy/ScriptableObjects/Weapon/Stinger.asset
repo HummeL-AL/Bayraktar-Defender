@@ -26,17 +26,17 @@ MonoBehaviour:
       _reloadTime: 0
       _shotHeat: 0
       _coolingSpeed: 0
-      _shootSound: {fileID: 0}
+      _shootSound: {fileID: 11400000, guid: d9753be31d24b6541adc03fdf99225d7, type: 2}
     _projectileStats:
       _projectile: {fileID: 0}
-      _penetrationLevel: 0
+      _penetrationLevel: 1
       _minMaxDamage: {x: 25, y: 50}
       _explosionRadius: 1.5
       _speed: 15
       _engineBurnTime: 7
       selfDestroyTime: 10
       _hitEffect: {fileID: 8611908471861341769, guid: f87f8a816acd20742be96be9268ec576, type: 3}
-      _hitSound: {fileID: 8300000, guid: 414c1fa411d1f564aa4c8e7f202645cf, type: 3}
+      _hitSound: {fileID: 11400000, guid: f1e269d39da26ea4aaa8f79f9ce48caf, type: 2}
       _landmark: {fileID: 0}
       _sensivity: 35
     _upgradeStats:

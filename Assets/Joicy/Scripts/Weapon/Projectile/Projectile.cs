@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     {
         selfDestroyTime = projectileStats.SelfDestroyTime;
 
-        foreach (IProjectileComponent projectileComponent in GetComponents<IProjectileComponent>())
+        foreach (IProjectileDataReceiver projectileComponent in GetComponents<IProjectileDataReceiver>())
         {
             projectileComponent.SetStats(projectileStats);
         }
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         ProjectileMovement movement = GetComponent<ProjectileMovement>();
         if (movement)
         {
-            movement.ObstacleDetected += Death;
+            movement.ObstacleDetected += OnObstacleHit;
         }
     }
 
@@ -42,6 +42,12 @@ public class Projectile : MonoBehaviour
     private IEnumerator SelfDestroy()
     {
         yield return new WaitForSeconds(selfDestroyTime);
+        Death();
+    }
+
+    private void OnObstacleHit(RaycastHit hit)
+    {
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
         Death();
     }
 }

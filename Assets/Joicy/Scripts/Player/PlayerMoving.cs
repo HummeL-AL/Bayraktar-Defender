@@ -30,6 +30,13 @@ public class PlayerMoving : MonoBehaviour
         }
     }
 
+    public void SetStats(SpeedUpgrade stats)
+    {
+        _minSpeed = stats.MinSpeed;
+        _maxSpeed = stats.MaxSpeed;
+        _accelerationSpeed = stats.Acceleration;
+    }
+
     private void FixedUpdate()
     {
         transform.parent.rotation *= Quaternion.Euler(0f, -_speed * Time.fixedDeltaTime, 0f);

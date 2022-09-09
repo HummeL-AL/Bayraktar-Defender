@@ -8,7 +8,7 @@ public class ObjectDetacher : MonoBehaviour
     {
         foreach (Transform detachment in objectsToDetach)
         {
-            detachment.parent = null;
+            if(detachment) detachment.parent = null;
         }
     }
 }

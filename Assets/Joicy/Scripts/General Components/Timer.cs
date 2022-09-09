@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Timer : MonoBehaviour, IProjectileComponent
+public class Timer : MonoBehaviour, IProjectileDataReceiver
 {
     public UnityEvent OnTimerEnd;
 
@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour, IProjectileComponent
     public void SetStats(ProjectileStats projectileStats)
     {
         timer = projectileStats.EngineBurnTime;
+        StartTimer();
     }
 
     public void StartTimer()

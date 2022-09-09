@@ -32,9 +32,12 @@ public class Tab : MonoBehaviour
 
     public void CloseTab()
     {
-        CloseChilds();
-        gameObject.SetActive(false);
-        OnTabClosed.Invoke();
+        if (gameObject.activeSelf)
+        {
+            CloseChilds();
+            gameObject.SetActive(false);
+            OnTabClosed.Invoke();
+        }
     }
 
     private bool OpenAvailable()
