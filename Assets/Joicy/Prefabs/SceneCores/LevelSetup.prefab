@@ -457,10 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ac9c461197ce44c8c834399a6f8faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputs:
-  - {fileID: 474125696279905106}
-  - {fileID: 474125698040009440}
-  _playerInput: {fileID: 474125698040009440}
+  gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
 --- !u!114 &474125696197382781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474125696279905111}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -4449,8 +4446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993e8f4fe23aec046a65b350d95335df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
   weaponSwitchedChannel: {fileID: 11400000, guid: 1176489a934651844931431ee3a8a65d, type: 2}
-  _weapons: []
 --- !u!1 &474125697818959903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,12 +5038,12 @@ GameObject:
   - component: {fileID: 3070009089339181416}
   - component: {fileID: 1668276029906142674}
   - component: {fileID: 6184671941150586215}
-  - component: {fileID: 474125698040009440}
   - component: {fileID: 5710832901741600786}
   - component: {fileID: 7593219389705714488}
   - component: {fileID: 474125698040009442}
   - component: {fileID: 4443057484559395434}
   - component: {fileID: 1001979950100632465}
+  - component: {fileID: 2925358946590529438}
   m_Layer: 8
   m_Name: Drone
   m_TagString: Untagged
@@ -5202,152 +5199,6 @@ CapsuleCollider:
   m_Height: 2.85
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &474125698040009440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474125698040009443}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: e03ddb90f30c9d140a0d54ba808d5918, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474125698040009442}
-        m_TargetAssemblyTypeName: PlayerMoving, Assembly-CSharp
-        m_MethodName: OnMoving
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 24e80ab1-0f7b-44f3-9223-50c47966fc43
-    m_ActionName: Drone/Moving[/Keyboard/w,/Keyboard/s]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1001979950100632465}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: OnRotating
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 474125697232976935}
-        m_TargetAssemblyTypeName: AnglesDisplay, Assembly-CSharp
-        m_MethodName: UpdateValue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 55aac708-9832-4c38-8053-9ad44574cdcf
-    m_ActionName: Drone/Camera[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1001979950100632465}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: OnZooming
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7ee86dce-f36b-43ef-89cf-cec411d98556
-    m_ActionName: Drone/Zoom[/Mouse/scroll/y]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474125697747240586}
-        m_TargetAssemblyTypeName: PlayerWeapon, Assembly-CSharp
-        m_MethodName: OnNextWeaponChoosing
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 8096477f-af42-4300-9613-b61cf25ae19d
-    m_ActionName: Drone/Weapon[/Keyboard/q,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474125697747240586}
-        m_TargetAssemblyTypeName: PlayerWeapon, Assembly-CSharp
-        m_MethodName: OnLeftMouseButton
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 89325730-8ede-41a1-a73e-aea2d9562a92
-    m_ActionName: Drone/Shooting[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474125697747240586}
-        m_TargetAssemblyTypeName: PlayerWeapon, Assembly-CSharp
-        m_MethodName: OnPreviousWeaponChoosing
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 46949f41-63d5-4908-928f-f12a4f9456b6
-    m_ActionName: Drone/ChoosePreviousWeapon[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 80ace682-cdff-4b98-b8ce-3d014cc78f0e
-    m_ActionName: UI/Pause[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e27b3c45-64de-4519-9e81-015ceb4daa8d
-    m_ActionName: UI/OpenUpgradeTab[/Keyboard/tab]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Drone
-  m_SplitScreenIndex: 0
-  m_Camera: {fileID: 0}
 --- !u!114 &5710832901741600786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5387,21 +5238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2918eab5f2a1e24ea29ea5db54d6628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnMove:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474125697225079869}
-        m_TargetAssemblyTypeName: SpeedDisplay, Assembly-CSharp
-        m_MethodName: UpdateValue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
   _minSpeed: 1
   _maxSpeed: 5
   _accelerationSpeed: 1
@@ -5438,6 +5275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f509fc62c48b46d438ba114bff7f950c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
   settingsChangedChannel: {fileID: 11400000, guid: 1f71df6d860f1c54cbbfbb861e87b58d, type: 2}
   mainCamera: {fileID: 0}
   _zoomSensitivity: 0.025
@@ -5446,6 +5284,19 @@ MonoBehaviour:
   _maxAngles: {x: 90, y: 360, z: 0}
   _minZoom: 30
   _maxZoom: 60
+--- !u!114 &2925358946590529438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474125698040009443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87527b39a515e434fbdac40c35b2a8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
 --- !u!1 &474125698170686454
 GameObject:
   m_ObjectHideFlags: 0

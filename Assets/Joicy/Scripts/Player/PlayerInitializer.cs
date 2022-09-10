@@ -86,7 +86,7 @@ public class PlayerInitializer : MonoBehaviour
     {
         Dictionary<string, int> droneUpgrades = saveData.UpgradesData.DroneLevels;
 
-        PlayerMoving movement = GetComponent<PlayerMoving>();
+        PlayerMovement movement = GetComponent<PlayerMovement>();
         if (movement)
         {
             droneUpgrades.TryGetValue("SpeedUpgrade", out int upgradeLevel);

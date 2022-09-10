@@ -24,98 +24,20 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
     ""name"": ""PlayerActionMap"",
     ""maps"": [
         {
-            ""name"": ""Drone"",
+            ""name"": ""Movement"",
             ""id"": ""1a915606-dc40-4169-a393-79f41b8f9fc7"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Accelerating"",
                     ""type"": ""Value"",
                     ""id"": ""24e80ab1-0f7b-44f3-9223-50c47966fc43"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Camera"",
-                    ""type"": ""Value"",
-                    ""id"": ""55aac708-9832-4c38-8053-9ad44574cdcf"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Zoom"",
-                    ""type"": ""Value"",
-                    ""id"": ""7ee86dce-f36b-43ef-89cf-cec411d98556"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""ChooseNextWeapon"",
-                    ""type"": ""Button"",
-                    ""id"": ""8096477f-af42-4300-9613-b61cf25ae19d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ChoosePreviousWeapon"",
-                    ""type"": ""Button"",
-                    ""id"": ""46949f41-63d5-4908-928f-f12a4f9456b6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Shooting"",
-                    ""type"": ""Button"",
-                    ""id"": ""89325730-8ede-41a1-a73e-aea2d9562a92"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ee899e51-cf26-4370-a711-544c71c775d6"",
-                    ""path"": ""<Mouse>/scroll/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Zoom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1a37f7f9-0f29-438d-8c1e-998ced75e371"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChooseNextWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bbd0ad04-32f9-4433-bf5c-065d5a534669"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Hold"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shooting"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""WASD"",
                     ""id"": ""b2f8bb3d-9fe8-40c8-8e06-5e93168b7c97"",
@@ -123,7 +45,7 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Accelerating"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -134,7 +56,7 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Accelerating"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -145,51 +67,38 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Accelerating"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""49c3714a-49b2-4239-8431-e266cfc7d57d"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": ""InvertVector2(invertX=false)"",
-                    ""groups"": """",
-                    ""action"": ""Camera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""60ed7ff8-aec3-4af9-b3a9-35d8af471294"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChoosePreviousWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""UI"",
-            ""id"": ""18058eb4-e28c-4108-843a-3d0a1e4c9a70"",
+            ""name"": ""Weapons"",
+            ""id"": ""0b52b3fb-73db-4a12-af56-651c454d78a0"",
             ""actions"": [
                 {
-                    ""name"": ""Pause"",
+                    ""name"": ""ChooseNextWeapon"",
                     ""type"": ""Button"",
-                    ""id"": ""80ace682-cdff-4b98-b8ce-3d014cc78f0e"",
+                    ""id"": ""480a6d69-ec84-4723-b91e-5e07f3d5098e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""OpenUpgradeTab"",
+                    ""name"": ""ChoosePreviousWeapon"",
                     ""type"": ""Button"",
-                    ""id"": ""e27b3c45-64de-4519-9e81-015ceb4daa8d"",
+                    ""id"": ""75105c75-dac1-4ccb-af09-8bcd9e4e967c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shooting"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa9b5a5d-5209-406f-ac39-7e7a365e4a66"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -199,23 +108,34 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""3bffb972-92b8-40cb-a7eb-7bb76dd43e9a"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""eaa666f9-a415-44da-83cf-602261c60a80"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""ChooseNextWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""60422efd-d401-4b03-8b7d-5efa2d640066"",
-                    ""path"": ""<Keyboard>/tab"",
+                    ""id"": ""9804609d-d18b-4183-a79f-47cd11dacc12"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""OpenUpgradeTab"",
+                    ""action"": ""ChoosePreviousWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc90bcc6-e3af-4691-9945-967c53eb21cb"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -224,18 +144,14 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Drone
-        m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
-        m_Drone_Movement = m_Drone.FindAction("Movement", throwIfNotFound: true);
-        m_Drone_Camera = m_Drone.FindAction("Camera", throwIfNotFound: true);
-        m_Drone_Zoom = m_Drone.FindAction("Zoom", throwIfNotFound: true);
-        m_Drone_ChooseNextWeapon = m_Drone.FindAction("ChooseNextWeapon", throwIfNotFound: true);
-        m_Drone_ChoosePreviousWeapon = m_Drone.FindAction("ChoosePreviousWeapon", throwIfNotFound: true);
-        m_Drone_Shooting = m_Drone.FindAction("Shooting", throwIfNotFound: true);
-        // UI
-        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
-        m_UI_OpenUpgradeTab = m_UI.FindAction("OpenUpgradeTab", throwIfNotFound: true);
+        // Movement
+        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+        m_Movement_Accelerating = m_Movement.FindAction("Accelerating", throwIfNotFound: true);
+        // Weapons
+        m_Weapons = asset.FindActionMap("Weapons", throwIfNotFound: true);
+        m_Weapons_ChooseNextWeapon = m_Weapons.FindAction("ChooseNextWeapon", throwIfNotFound: true);
+        m_Weapons_ChoosePreviousWeapon = m_Weapons.FindAction("ChoosePreviousWeapon", throwIfNotFound: true);
+        m_Weapons_Shooting = m_Weapons.FindAction("Shooting", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -292,65 +208,74 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Drone
-    private readonly InputActionMap m_Drone;
-    private IDroneActions m_DroneActionsCallbackInterface;
-    private readonly InputAction m_Drone_Movement;
-    private readonly InputAction m_Drone_Camera;
-    private readonly InputAction m_Drone_Zoom;
-    private readonly InputAction m_Drone_ChooseNextWeapon;
-    private readonly InputAction m_Drone_ChoosePreviousWeapon;
-    private readonly InputAction m_Drone_Shooting;
-    public struct DroneActions
+    // Movement
+    private readonly InputActionMap m_Movement;
+    private IMovementActions m_MovementActionsCallbackInterface;
+    private readonly InputAction m_Movement_Accelerating;
+    public struct MovementActions
     {
         private @PlayerActionMap m_Wrapper;
-        public DroneActions(@PlayerActionMap wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Drone_Movement;
-        public InputAction @Camera => m_Wrapper.m_Drone_Camera;
-        public InputAction @Zoom => m_Wrapper.m_Drone_Zoom;
-        public InputAction @ChooseNextWeapon => m_Wrapper.m_Drone_ChooseNextWeapon;
-        public InputAction @ChoosePreviousWeapon => m_Wrapper.m_Drone_ChoosePreviousWeapon;
-        public InputAction @Shooting => m_Wrapper.m_Drone_Shooting;
-        public InputActionMap Get() { return m_Wrapper.m_Drone; }
+        public MovementActions(@PlayerActionMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Accelerating => m_Wrapper.m_Movement_Accelerating;
+        public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(DroneActions set) { return set.Get(); }
-        public void SetCallbacks(IDroneActions instance)
+        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+        public void SetCallbacks(IMovementActions instance)
         {
-            if (m_Wrapper.m_DroneActionsCallbackInterface != null)
+            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnMovement;
-                @Camera.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnCamera;
-                @Camera.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnCamera;
-                @Camera.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnCamera;
-                @Zoom.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnZoom;
-                @Zoom.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnZoom;
-                @Zoom.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnZoom;
-                @ChooseNextWeapon.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnChooseNextWeapon;
-                @ChooseNextWeapon.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnChooseNextWeapon;
-                @ChooseNextWeapon.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnChooseNextWeapon;
-                @ChoosePreviousWeapon.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnChoosePreviousWeapon;
-                @ChoosePreviousWeapon.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnChoosePreviousWeapon;
-                @ChoosePreviousWeapon.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnChoosePreviousWeapon;
-                @Shooting.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnShooting;
-                @Shooting.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnShooting;
-                @Shooting.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnShooting;
+                @Accelerating.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnAccelerating;
+                @Accelerating.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnAccelerating;
+                @Accelerating.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnAccelerating;
             }
-            m_Wrapper.m_DroneActionsCallbackInterface = instance;
+            m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @Camera.started += instance.OnCamera;
-                @Camera.performed += instance.OnCamera;
-                @Camera.canceled += instance.OnCamera;
-                @Zoom.started += instance.OnZoom;
-                @Zoom.performed += instance.OnZoom;
-                @Zoom.canceled += instance.OnZoom;
+                @Accelerating.started += instance.OnAccelerating;
+                @Accelerating.performed += instance.OnAccelerating;
+                @Accelerating.canceled += instance.OnAccelerating;
+            }
+        }
+    }
+    public MovementActions @Movement => new MovementActions(this);
+
+    // Weapons
+    private readonly InputActionMap m_Weapons;
+    private IWeaponsActions m_WeaponsActionsCallbackInterface;
+    private readonly InputAction m_Weapons_ChooseNextWeapon;
+    private readonly InputAction m_Weapons_ChoosePreviousWeapon;
+    private readonly InputAction m_Weapons_Shooting;
+    public struct WeaponsActions
+    {
+        private @PlayerActionMap m_Wrapper;
+        public WeaponsActions(@PlayerActionMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ChooseNextWeapon => m_Wrapper.m_Weapons_ChooseNextWeapon;
+        public InputAction @ChoosePreviousWeapon => m_Wrapper.m_Weapons_ChoosePreviousWeapon;
+        public InputAction @Shooting => m_Wrapper.m_Weapons_Shooting;
+        public InputActionMap Get() { return m_Wrapper.m_Weapons; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(WeaponsActions set) { return set.Get(); }
+        public void SetCallbacks(IWeaponsActions instance)
+        {
+            if (m_Wrapper.m_WeaponsActionsCallbackInterface != null)
+            {
+                @ChooseNextWeapon.started -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChooseNextWeapon;
+                @ChooseNextWeapon.performed -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChooseNextWeapon;
+                @ChooseNextWeapon.canceled -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChooseNextWeapon;
+                @ChoosePreviousWeapon.started -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChoosePreviousWeapon;
+                @ChoosePreviousWeapon.performed -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChoosePreviousWeapon;
+                @ChoosePreviousWeapon.canceled -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnChoosePreviousWeapon;
+                @Shooting.started -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnShooting;
+                @Shooting.performed -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnShooting;
+                @Shooting.canceled -= m_Wrapper.m_WeaponsActionsCallbackInterface.OnShooting;
+            }
+            m_Wrapper.m_WeaponsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
                 @ChooseNextWeapon.started += instance.OnChooseNextWeapon;
                 @ChooseNextWeapon.performed += instance.OnChooseNextWeapon;
                 @ChooseNextWeapon.canceled += instance.OnChooseNextWeapon;
@@ -363,60 +288,15 @@ public partial class @PlayerActionMap : IInputActionCollection2, IDisposable
             }
         }
     }
-    public DroneActions @Drone => new DroneActions(this);
-
-    // UI
-    private readonly InputActionMap m_UI;
-    private IUIActions m_UIActionsCallbackInterface;
-    private readonly InputAction m_UI_Pause;
-    private readonly InputAction m_UI_OpenUpgradeTab;
-    public struct UIActions
+    public WeaponsActions @Weapons => new WeaponsActions(this);
+    public interface IMovementActions
     {
-        private @PlayerActionMap m_Wrapper;
-        public UIActions(@PlayerActionMap wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Pause => m_Wrapper.m_UI_Pause;
-        public InputAction @OpenUpgradeTab => m_Wrapper.m_UI_OpenUpgradeTab;
-        public InputActionMap Get() { return m_Wrapper.m_UI; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
-        public void SetCallbacks(IUIActions instance)
-        {
-            if (m_Wrapper.m_UIActionsCallbackInterface != null)
-            {
-                @Pause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @OpenUpgradeTab.started -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenUpgradeTab;
-                @OpenUpgradeTab.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenUpgradeTab;
-                @OpenUpgradeTab.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenUpgradeTab;
-            }
-            m_Wrapper.m_UIActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-                @OpenUpgradeTab.started += instance.OnOpenUpgradeTab;
-                @OpenUpgradeTab.performed += instance.OnOpenUpgradeTab;
-                @OpenUpgradeTab.canceled += instance.OnOpenUpgradeTab;
-            }
-        }
+        void OnAccelerating(InputAction.CallbackContext context);
     }
-    public UIActions @UI => new UIActions(this);
-    public interface IDroneActions
+    public interface IWeaponsActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnCamera(InputAction.CallbackContext context);
-        void OnZoom(InputAction.CallbackContext context);
         void OnChooseNextWeapon(InputAction.CallbackContext context);
         void OnChoosePreviousWeapon(InputAction.CallbackContext context);
         void OnShooting(InputAction.CallbackContext context);
-    }
-    public interface IUIActions
-    {
-        void OnPause(InputAction.CallbackContext context);
-        void OnOpenUpgradeTab(InputAction.CallbackContext context);
     }
 }

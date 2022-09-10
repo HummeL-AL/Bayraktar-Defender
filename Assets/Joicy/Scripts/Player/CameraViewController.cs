@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Zenject;
 
 public class CameraViewController : MonoBehaviour
 {
+    [SerializeField] private BoolEventChannel gameStateChanged = null;
     [SerializeField] private VoidEventChannel settingsChangedChannel = null;
 
     [SerializeField] private Camera mainCamera = null;
@@ -16,23 +16,7 @@ public class CameraViewController : MonoBehaviour
 
     [Inject] private SettingsData settingsData = null;
 
-    public void OnZooming(InputAction.CallbackContext context)
-    {
-        float delta = context.ReadValue<float>();
-        if (delta != 0)
-        {
-            UpdateZoom(delta);
-        }
-    }
-
-    public void OnRotating(InputAction.CallbackContext context)
-    {
-        Vector2 delta = context.ReadValue<Vector2>();
-        if(delta != Vector2.zero)
-        {
-            UpdateRotating(delta);
-        }
-    }
+    private CameraActionMap _actionMap = null;
 
     public void SetStats(ZoomUpgrade stats)
     {
@@ -43,11 +27,25 @@ public class CameraViewController : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        mainCamera = Camera.main;
+        gameStateChanged.ChannelEvent += OnGameStateChanged;
         settingsChangedChannel.ChannelEvent += OnSettingsChanged;
 
+        Cursor.lockState = CursorLockMode.Locked;
+        mainCamera = Camera.main;
+        _actionMap = new CameraActionMap();
+
         ApplySettings();
+    }
+
+    private void OnEnable()
+    {
+        _actionMap?.Enable();
+    }
+
+    private void Update()
+    {
+        UpdateRotating(_actionMap.View.LookAround.ReadValue<Vector2>());
+        UpdateZoom(_actionMap.View.Zoom.ReadValue<float>());
     }
 
     private void UpdateZoom(float delta)
@@ -77,5 +75,22 @@ public class CameraViewController : MonoBehaviour
     private void OnSettingsChanged()
     {
         ApplySettings();
+    }
+
+    private void OnGameStateChanged(bool resumed)
+    {
+        if (resumed)
+        {
+            _actionMap?.Enable();
+        }
+        else
+        {
+            _actionMap?.Disable();
+        }
+    }
+
+    private void OnDisable()
+    {
+        _actionMap?.Disable();
     }
 }

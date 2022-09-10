@@ -3,7 +3,7 @@ using TMPro;
 
 public class SpeedDisplay : MonoBehaviour
 {
-    [SerializeField] private PlayerMoving _player = null;
+    [SerializeField] private PlayerMovement _player = null;
 
     private TMP_Text display = null;
 

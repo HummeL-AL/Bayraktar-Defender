@@ -25,6 +25,11 @@ public class Controllable : MonoBehaviour, IProjectileDataReceiver
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        _actionMap?.Enable();
+    }
+
     private void Update()
     {
         ApplyCorrection(_actionMap.Correctable.ProjectileCorrection.ReadValue<Vector2>());
@@ -32,13 +37,17 @@ public class Controllable : MonoBehaviour, IProjectileDataReceiver
 
     private void ApplyCorrection(Vector2 delta)
     {
-        Debug.Log(delta);
-        if (delta != Vector2.one && !_isControllable)
+        if (delta != Vector2.zero && _isControllable)
         {
             Vector3 correction = new Vector3(delta.y * _sensitivity, delta.x * _sensitivity, 0f);
 
             Quaternion correctionRotation = Quaternion.Euler(correction * Time.deltaTime);
             _rigidbody.MoveRotation(transform.rotation * correctionRotation);
         }
+    }
+
+    private void OnDisable()
+    {
+        _actionMap?.Disable();
     }
 }

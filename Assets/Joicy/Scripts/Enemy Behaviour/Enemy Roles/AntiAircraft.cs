@@ -12,7 +12,7 @@ public class AntiAircraft : MonoBehaviour, IActivableRole
     [Inject] private Player player = null;
 
     private Transform playerTransform = null;
-    private PlayerMoving movement = null;
+    private PlayerMovement movement = null;
     private IEnumerator attack = null;
 
     public void Activate()
@@ -35,7 +35,7 @@ public class AntiAircraft : MonoBehaviour, IActivableRole
     {
         attack = Attack();
         playerTransform = player.transform;
-        movement = player.GetComponent<PlayerMoving>();
+        movement = player.GetComponent<PlayerMovement>();
     }
 
     //Should use better lead calculation method

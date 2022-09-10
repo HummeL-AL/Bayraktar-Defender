@@ -129,7 +129,6 @@ public class SettingsManager : MonoBehaviour
                     value = resolutions[resolutions.Length - 1];
 
                     string[] currentResolution = PlayerPrefs.GetString(name).Split('x');
-                    Debug.Log(PlayerPrefs.GetString(name));
                     int currentWidth = Convert.ToInt32(currentResolution[0]);
                     int currentHeight = Convert.ToInt32(currentResolution[1]);
 

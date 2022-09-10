@@ -1,0 +1,102 @@
+{
+    "name": "CameraActionMap",
+    "maps": [
+        {
+            "name": "View",
+            "id": "82981907-4c59-4b10-8c84-94f38ef11231",
+            "actions": [
+                {
+                    "name": "LookAround",
+                    "type": "Value",
+                    "id": "a17010f3-5974-4ada-a446-d676a345f341",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "3a7c8629-4f14-4dae-bd7a-4a79125b26c2",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e2ed0cb2-429b-447f-bf35-d61877bc5c79",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c672bb8-d4e8-4eb2-832b-e4247aba5209",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false)",
+                    "groups": "",
+                    "action": "LookAround",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Modes",
+            "id": "007bb72b-d409-4789-8600-87fbf31ff23b",
+            "actions": [
+                {
+                    "name": "ChoosePreviousMode",
+                    "type": "Button",
+                    "id": "7f140527-9e88-4acb-86ef-4c64b4b5dde5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChooseNextMode",
+                    "type": "Button",
+                    "id": "68c33f2e-269c-4091-a8d3-10d0e3f433d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62a8f4e8-e338-45c1-82d1-f88cccc391de",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChooseNextMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09a1abb1-7120-4e38-8a18-91f64ef5604a",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChoosePreviousMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

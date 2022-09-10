@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerWeapon : MonoBehaviour
 {
+    [SerializeField] private BoolEventChannel gameStateChanged = null;
     [SerializeField] private VoidEventChannel weaponSwitchedChannel = null;
 
-    [SerializeField] private List<Weapon> _weapons = null;
-
+    private PlayerActionMap _actionMap = null;
+    private List<Weapon> _weapons = new List<Weapon>();
     private Weapon _choosedWeapon = null;
+    private Coroutine shootRoutine = null;
+
     public Weapon CurrentWeapon { get => _choosedWeapon; }
 
     public void SetWeapon(int index)
@@ -24,31 +26,32 @@ public class PlayerWeapon : MonoBehaviour
         _weapons.Add(weapon);
     }
 
-    public void OnLeftMouseButton(InputAction.CallbackContext context)
+    private void Awake()
     {
-        if (context.phase == InputActionPhase.Started)
-        {
-            StartCoroutine("Shooting");
-        }
-        else if(context.phase == InputActionPhase.Canceled)
-        {
-            StopCoroutine("Shooting");
-        }
+        gameStateChanged.ChannelEvent += OnGameStateChanged;
+
+        _actionMap = new PlayerActionMap();
+        _actionMap.Weapons.ChooseNextWeapon.performed += ChooseNextWeapon;
+        _actionMap.Weapons.ChoosePreviousWeapon.performed += ChoosePreviousWeapon;
+
+        _actionMap.Weapons.Shooting.started += CheckShooting;
+        _actionMap.Weapons.Shooting.canceled += CheckShooting;
     }
 
-    public void OnNextWeaponChoosing(InputAction.CallbackContext context)
+    private void OnEnable()
     {
-        if (context.phase == InputActionPhase.Performed)
-        {
-            ChooseNextWeapon();
-        }
+        _actionMap?.Enable();
     }
 
-    public void OnPreviousWeaponChoosing(InputAction.CallbackContext context)
+    private void CheckShooting(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
+        if(context.started)
         {
-            ChoosePreviousWeapon();
+            shootRoutine = StartCoroutine(Shooting());
+        }
+        else if(context.canceled)
+        {
+            StopCoroutine(shootRoutine);
         }
     }
 
@@ -67,7 +70,7 @@ public class PlayerWeapon : MonoBehaviour
         }
     }
 
-    private void ChooseNextWeapon()
+    private void ChooseNextWeapon(InputAction.CallbackContext context)
     {
         int nextID = _weapons.IndexOf(_choosedWeapon) + 1;
         int maxID = _weapons.Count - 1;
@@ -84,7 +87,7 @@ public class PlayerWeapon : MonoBehaviour
         weaponSwitchedChannel.RaiseEvent();
     }
 
-    private void ChoosePreviousWeapon()
+    private void ChoosePreviousWeapon(InputAction.CallbackContext context)
     {
         int prevID = _weapons.IndexOf(_choosedWeapon) - 1;
         int maxID = _weapons.Count - 1;
@@ -99,5 +102,22 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         weaponSwitchedChannel.RaiseEvent();
+    }
+
+    private void OnGameStateChanged(bool resumed)
+    {
+        if (resumed)
+        {
+            _actionMap?.Enable();
+        }
+        else
+        {
+            _actionMap?.Disable();
+        }
+    }
+
+    private void OnDisable()
+    {
+        _actionMap?.Disable();
     }
 }
