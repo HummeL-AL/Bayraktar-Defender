@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c930cba104a8774f9a5f1621c023b33, type: 3}
   m_Name: Test_0
   m_EditorClassIdentifier: 
-  levelName: TestLevel
-  campaignNumber: 3
-  levelNumber: 0
-  victimsPenalty: 100
-  _waves:
-  - {fileID: 11400000, guid: 7fa37e2fcf6bd7d4587ffa53c6576fa1, type: 2}
-  - {fileID: 11400000, guid: 74ff1680d8028fe4f8bd70d1e3c2a3bd, type: 2}
+  levelData:
+    levelName: Test
+    campaignNumber: 3
+    levelNumber: 0
+  levelGraphics:
+    fogMaterial: {fileID: 2100000, guid: 999b0961c76422b448e95f316c13cc14, type: 2}
+  levelGameplay:
+    victimsPenalty: 100
+    _waves:
+    - {fileID: 11400000, guid: 7fa37e2fcf6bd7d4587ffa53c6576fa1, type: 2}
+    - {fileID: 11400000, guid: 74ff1680d8028fe4f8bd70d1e3c2a3bd, type: 2}

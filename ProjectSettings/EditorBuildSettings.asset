@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Joicy/Scenes/Campaigns/Testing/Levels/Level_3_0.unity
     guid: 704df62b09513bd4f82e5f6a7ab78261
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Testing/Levels/Level_3_1.unity
+    guid: 4d74105b0bd29a443b009502f566a0cd
   m_configObjects: {}

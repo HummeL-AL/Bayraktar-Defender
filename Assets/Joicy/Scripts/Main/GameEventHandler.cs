@@ -48,13 +48,13 @@ public class GameEventHandler : MonoBehaviour
     private void OnCityAttacked(int damage)
     {
         levelStats.AddVictims(damage);
-        levelStats.AddMoney(damage * -levelSettings.VictimsPenalty);
+        levelStats.AddMoney(damage * -levelSettings.LevelGameplay.VictimsPenalty);
     }
 
     private void OnGameWon()
     {
-        int currentCampaign = levelSettings.CampaignNumber;
-        int currentLevel = levelSettings.LevelNumber;
+        int currentCampaign = levelSettings.LevelData.CampaignNumber;
+        int currentLevel = levelSettings.LevelData.LevelNumber;
 
         int[] completedLevels = saveData.GameData.CompletedLevels;
         if (completedLevels[currentCampaign] == currentLevel)

@@ -18,9 +18,12 @@ public class WeaponDisplay : MonoBehaviour
     {
         for (int i = 0; i < resourcesLoader.Weapons.Length; i++)
         {
-            WeaponUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<WeaponUpgradeButton>();
-            upgrade.SetWeapon(resourcesLoader.Weapons[i]);
-            upgrade.UpdateWeaponInfo();
+            if (resourcesLoader.DroneUpgrades[i].IsVisible)
+            {
+                WeaponUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<WeaponUpgradeButton>();
+                upgrade.SetWeapon(resourcesLoader.Weapons[i]);
+                upgrade.UpdateWeaponInfo();
+            }
         }
     }
 

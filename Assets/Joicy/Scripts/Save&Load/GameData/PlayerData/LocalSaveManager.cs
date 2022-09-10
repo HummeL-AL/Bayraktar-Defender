@@ -111,7 +111,7 @@ public class LocalSaveManager : ISaver
     private Dictionary<string, int> CreateDroneUpgradesData()
     {
         Dictionary<string, int> droneUpgrades = new Dictionary<string, int>();
-        foreach (IDroneUpgradeData droneUpgrade in resourcesLoader.DroneUpgrades)
+        foreach (DroneUpgradeData droneUpgrade in resourcesLoader.DroneUpgrades)
         {
             int weaponLlevel = droneUpgrade.UnlockedByDefault ? 1 : 0;
             droneUpgrades.Add(droneUpgrade.Name, weaponLlevel);

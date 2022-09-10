@@ -18,9 +18,12 @@ public class DroneUpgradesDisplay : MonoBehaviour
     {
         for (int i = 0; i < resourcesLoader.DroneUpgrades.Length; i++)
         {
-            DroneUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<DroneUpgradeButton>();
-            upgrade.SetUpgrade(resourcesLoader.DroneUpgrades[i]);
-            upgrade.UpdateUpgradeInfo();
+            if (resourcesLoader.DroneUpgrades[i].IsVisible)
+            {
+                DroneUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<DroneUpgradeButton>();
+                upgrade.SetUpgrade(resourcesLoader.DroneUpgrades[i]);
+                upgrade.UpdateUpgradeInfo();
+            }
         }
     }
 

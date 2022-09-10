@@ -3,11 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "HealthUpgrade_", menuName = "ScriptableObjects/DroneUpgrades/Health", order = 1)]
 public class HealthUpgradeData : DroneUpgradeData
 {
+    [SerializeField] private bool isVisible = true;
     [SerializeField] private bool unlockedByDefault = false;
     [SerializeField] private HealthUpgrade[] upgrades = null;
-        
-    public override string Name { get => name; }
+
+    public override bool IsVisible { get => isVisible; }
     public override bool UnlockedByDefault { get => unlockedByDefault; }
+    public override string Name { get => name; }
     public override int MaxLevel { get => upgrades.Length - 1; }
     public override IDroneUpgrade GetUpgrade(int level)
     {

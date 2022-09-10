@@ -12,12 +12,12 @@ public class LevelChooser : MonoBehaviour
 
     public void ChooseLevel()
     {
-        SceneManager.LoadScene($"{Level.Scene}", LoadSceneMode.Single);
+        SceneManager.LoadScene($"{Level.LevelData.Scene}", LoadSceneMode.Single);
     }
 
     public void Initialize(bool active)
     {
-        levelName.text = Level.Name;
+        levelName.text = Level.LevelData.Name;
 
         if(!active)
         {

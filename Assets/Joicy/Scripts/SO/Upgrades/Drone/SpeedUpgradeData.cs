@@ -3,11 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpeedUpgrade_", menuName = "ScriptableObjects/DroneUpgrades/Speed", order = 1)]
 public class SpeedUpgradeData : DroneUpgradeData
 {
+    [SerializeField] private bool isVisible = true;
     [SerializeField] private bool unlockedByDefault = false;
     [SerializeField] private SpeedUpgrade[] upgrades;
 
-    public override string Name { get => name; }
+    public override bool IsVisible { get => isVisible; }
     public override bool UnlockedByDefault { get => unlockedByDefault; }
+    public override string Name { get => name; }
     public override int MaxLevel { get => upgrades.Length - 1; }
     public override IDroneUpgrade GetUpgrade(int level)
     {

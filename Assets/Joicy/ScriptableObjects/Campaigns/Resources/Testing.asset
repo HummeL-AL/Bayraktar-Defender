@@ -15,3 +15,4 @@ MonoBehaviour:
   campaignName: Test
   _levels:
   - {fileID: 11400000, guid: 5a193c2dc90678b49b9010224019c0ea, type: 2}
+  - {fileID: 11400000, guid: 16235780f3470cb4ebfb94fb47361aff, type: 2}

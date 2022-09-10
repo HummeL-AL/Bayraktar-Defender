@@ -2,7 +2,6 @@ using System;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 public class SettingsManager : MonoBehaviour

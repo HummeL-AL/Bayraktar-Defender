@@ -16,7 +16,6 @@ public class FullScreenModeChooser : DropdownChooser
         }
 
         FullScreenMode mode = (FullScreenMode)Property.GetValue(Object);
-        Debug.Log(mode.ToString());
         int index = options.IndexOf(mode.ToString());
         dropdown.AddOptions(options);
         dropdown.value = index;

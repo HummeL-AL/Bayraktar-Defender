@@ -16,13 +16,8 @@ public class WaveSpawner : MonoBehaviour
 
     private void Awake()
     {
-        waves = levelSettings.Waves;
+        waves = levelSettings.LevelGameplay.Waves;
         stats.SetMaxWave(waves.Length);
-    }
-
-    private void Start()
-    {
-        
     }
 
     private void Update()

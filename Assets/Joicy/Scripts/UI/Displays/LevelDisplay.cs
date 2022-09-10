@@ -15,7 +15,7 @@ public class LevelDisplay : MonoBehaviour
         int levelNumber = 0;
         foreach(Level level in Campaign.Levels)
         {
-            int campaignID = level.CampaignNumber;
+            int campaignID = level.LevelData.CampaignNumber;
             bool isLevelAvailable = saveData.GameData.CompletedLevels[campaignID] >= levelNumber;
 
             LevelChooser chooser = Instantiate(levelChooser, transform);

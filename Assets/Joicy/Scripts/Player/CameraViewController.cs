@@ -22,7 +22,6 @@ public class CameraViewController : MonoBehaviour
     {
         _minZoom = stats.MinZoom;
         _maxZoom = stats.MaxZoom;
-
     }
 
     private void Awake()
