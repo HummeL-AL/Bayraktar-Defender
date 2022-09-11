@@ -357,6 +357,9 @@ MonoBehaviour:
   minDamage: 0
   maxDamage: 250
   explosionRadius: 30
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 896
   soundEffects:
   - {fileID: 11400000, guid: f1e269d39da26ea4aaa8f79f9ce48caf, type: 2}
   visualEffects:

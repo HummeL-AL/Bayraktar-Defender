@@ -7,6 +7,7 @@ public class DirectMovement : MonoBehaviour, IEnemyMovement
 
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _targetDistance = 25f;
+    [SerializeField] private LayerMask obstacleLayers = 0;
 
     public void Activate()
     {
@@ -45,7 +46,7 @@ public class DirectMovement : MonoBehaviour, IEnemyMovement
         transform.Translate(toCenter * _speed * SpeedMultiplier * Time.deltaTime, Space.World);
 
         RaycastHit hit;
-        Physics.Raycast(transform.position + Vector3.up * 50f, Vector3.down, out hit, 100f, 1 << 6);
+        Physics.Raycast(transform.position + Vector3.up * 50f, Vector3.down, out hit, 100f, obstacleLayers);
 
         transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
         transform.LookAt(Vector3.zero, hit.normal);

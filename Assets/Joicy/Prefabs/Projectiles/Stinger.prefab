@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -609309965071031372}
   - component: {fileID: -2529902402772976619}
   - component: {fileID: -3503147597496794442}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Stinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  collidedLayers:
+    serializedVersion: 2
+    m_Bits: 328
 --- !u!114 &-5601350207213892061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +144,9 @@ MonoBehaviour:
   minDamage: 0
   maxDamage: 0
   explosionRadius: 0
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 960
   soundEffects: []
   visualEffects: []
   projector: {fileID: 0}
@@ -227,7 +233,7 @@ GameObject:
   - component: {fileID: 4650690371425228867}
   - component: {fileID: 7381400471544447650}
   - component: {fileID: 3022964018623147658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,6 +461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stinger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3f6d9fa0b765124280866d8e71bb1ff, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f6d9fa0b765124280866d8e71bb1ff, type: 3}
@@ -518,6 +528,10 @@ PrefabInstance:
     - target: {fileID: 3395173714541586690, guid: a1ee2a5563ad165499ddd5e875d37082, type: 3}
       propertyPath: m_Name
       value: Engine_Stinger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395173714541586690, guid: a1ee2a5563ad165499ddd5e875d37082, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

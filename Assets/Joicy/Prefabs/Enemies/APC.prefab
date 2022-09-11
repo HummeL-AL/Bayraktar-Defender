@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872487578189228901}
   - component: {fileID: 8993621722298046170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destroyed_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 5949280539751635543}
   - component: {fileID: 7110739271083972835}
   - component: {fileID: 403745280606424631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2150563987853294314}
   - component: {fileID: 2895530840477618378}
   - component: {fileID: 1290294085314284063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5800329994322239096}
   - component: {fileID: 4084542057268791026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destroyed_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,6 +389,10 @@ PrefabInstance:
     - target: {fileID: 5714525394807869441, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: _targetDistance
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714525394807869441, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
+      propertyPath: obstacleLayers.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6075562314763099455, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: m_Size

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9009725089233674746}
   - component: {fileID: 8953690974000303409}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Foliage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 5121312718312807981}
   - component: {fileID: 5121312718312807978}
   - component: {fileID: 5121312718312807979}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5121312719188480977}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

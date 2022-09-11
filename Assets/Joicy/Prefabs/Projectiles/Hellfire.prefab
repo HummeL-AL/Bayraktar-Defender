@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7531290096007576785}
   - component: {fileID: 5978740015874234527}
   - component: {fileID: 3948446538831393925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: -4867697064003819781}
   - component: {fileID: -6070956933776820191}
   - component: {fileID: -4790652655021619011}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hellfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,6 +413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  collidedLayers:
+    serializedVersion: 2
+    m_Bits: 264
 --- !u!114 &-4867697064003819781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +432,9 @@ MonoBehaviour:
   minDamage: 0
   maxDamage: 0
   explosionRadius: 0
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 896
   soundEffects: []
   visualEffects: []
   projector: {fileID: 0}
@@ -556,6 +562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Engine_Hellfire
       objectReference: {fileID: 0}
+    - target: {fileID: 3395173714541586690, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: edceb64f0d199934f89b1f7a0b6f756a, type: 3}
@@ -635,7 +645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: faad6985cdd0f234f8939a4ab5227c61, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

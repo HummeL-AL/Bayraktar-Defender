@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -9077688445616711220}
   - component: {fileID: 2087493142729476663}
   - component: {fileID: -4791626303666552629}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hydra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  collidedLayers:
+    serializedVersion: 2
+    m_Bits: 264
 --- !u!114 &-9077688445616711220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +142,9 @@ MonoBehaviour:
   minDamage: 0
   maxDamage: 0
   explosionRadius: 0
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 896
   soundEffects: []
   visualEffects: []
   projector: {fileID: 0}
@@ -210,7 +216,7 @@ GameObject:
   - component: {fileID: 4650690371425228867}
   - component: {fileID: 7381400471544447650}
   - component: {fileID: 6114687816273414198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: faad6985cdd0f234f8939a4ab5227c61, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -517,6 +523,10 @@ PrefabInstance:
     - target: {fileID: 3395173714541586690, guid: 4a5c22c40d3d0314e9beb7097721dfc8, type: 3}
       propertyPath: m_Name
       value: Engine_Hydra
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395173714541586690, guid: 4a5c22c40d3d0314e9beb7097721dfc8, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

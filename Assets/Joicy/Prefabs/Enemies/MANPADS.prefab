@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5103233188387697364}
   - component: {fileID: 3050355336391204864}
   - component: {fileID: 921811353760902741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7488957095333085287}
   - component: {fileID: 4713527612160085850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destroyed_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

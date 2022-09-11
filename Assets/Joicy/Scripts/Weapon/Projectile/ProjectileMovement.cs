@@ -7,6 +7,7 @@ public class ProjectileMovement : MonoBehaviour, IProjectileDataReceiver
     public CollisionDelegate ObstacleDetected;
 
     [SerializeField] private float speed = 0;
+    [SerializeField] private LayerMask collidedLayers = 0;
 
     private Rigidbody rigidbody = null;
 
@@ -33,7 +34,7 @@ public class ProjectileMovement : MonoBehaviour, IProjectileDataReceiver
 
     private IEnumerator CheckHit()
     {
-        Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, speed * Time.fixedDeltaTime, 1 << 6 | 1 << 8);
+        Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, speed * Time.fixedDeltaTime, collidedLayers);
 
         if (hit.collider)
         {

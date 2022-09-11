@@ -8,6 +8,7 @@ public class Explosive : MonoBehaviour, IProjectileDataReceiver
     [SerializeField] private float minDamage = 0;
     [SerializeField] private float maxDamage = 0;
     [SerializeField] private float explosionRadius = 0;
+    [SerializeField] private LayerMask affectedLayers = 0;
 
     [SerializeField] private AudioEffect[] soundEffects = null;
     [SerializeField] private ParticleSystem[] visualEffects = null;
@@ -39,7 +40,7 @@ public class Explosive : MonoBehaviour, IProjectileDataReceiver
 
         Vector3 impactPosition = transform.position;
 
-        foreach (Collider collider in Physics.OverlapSphere(impactPosition, explosionRadius, 1 << 3 | 1 << 8))
+        foreach (Collider collider in Physics.OverlapSphere(impactPosition, explosionRadius, affectedLayers))
         {
             Transform hittedObject = collider.transform;
             Health hittedHealth = hittedObject.GetComponent<Health>();

@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ThermalVision
-  m_Shader: {fileID: -6465566751694194690, guid: 7d8a593cc485a9e45882ff8cfa430ed1, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 5f73b3613b48fb044ba3f0bd1161085f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -111,6 +111,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _Multiplier: 5
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -130,5 +131,7 @@ Material:
     - _Color_0: {r: 5.992157, g: 4.611765, b: 0, a: 1}
     - _Color_1: {r: 2.9960785, g: 0.84705883, b: 0, a: 1}
     - _EmissionColor: {r: 64, g: 25.34902, b: 0, a: 1}
+    - _FirstColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SecondColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

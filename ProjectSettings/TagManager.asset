@@ -8,14 +8,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Damageable
+  - Ground
   - Water
   - UI
-  - ProjectileObstacle
+  - Player
+  - Enemy
+  - Foliage
+  - City
   - Projectile
-  - DamageableObstacle
-  - 
-  - 
   - 
   - 
   - 

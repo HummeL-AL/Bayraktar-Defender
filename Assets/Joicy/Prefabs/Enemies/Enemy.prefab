@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1363286558183751573}
   - component: {fileID: 5714525394807869441}
   - component: {fileID: 5033032351359079807}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _targetDistance: 10
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &5033032351359079807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +125,7 @@ GameObject:
   - component: {fileID: 1780943631647685560}
   - component: {fileID: 1612646077939627342}
   - component: {fileID: 9069452003407853986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5135171949558787484}
   - component: {fileID: 6075562314763099455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

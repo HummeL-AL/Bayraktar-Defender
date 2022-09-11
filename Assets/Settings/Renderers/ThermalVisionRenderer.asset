@@ -18,7 +18,9 @@ MonoBehaviour:
   - {fileID: 8646491948969224218}
   - {fileID: 3778902679871873098}
   - {fileID: 1319382900606340882}
-  m_RendererFeatureMap: 1ae895d39d82fe774ae08842f75b7134128f5df9c1634f12
+  - {fileID: 7790420351114243098}
+  - {fileID: 3471312040583532203}
+  m_RendererFeatureMap: 1ae895d39d82fe774ae08842f75b7134128f5df9c1634f121a6c23af08221d6cab8e84bbe8932c30
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -71,7 +73,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     Event: 550
-    blitMaterial: {fileID: 2100000, guid: 999b0961c76422b448e95f316c13cc14, type: 2}
+    blitMaterial: {fileID: 2100000, guid: f675959f9df38c54b824be04927392d1, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
     requireDepthNormals: 0
@@ -110,6 +112,45 @@ MonoBehaviour:
     dstTextureObject: {fileID: 0}
     overrideGraphicsFormat: 0
     graphicsFormat: 4
+--- !u!114 &3471312040583532203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: EnemyHighlight
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: EnemyHighlight
+    Event: 300
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 1152
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: 1e1f5a4446af95c4d8f8533cdf77b5ad, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &3778902679871873098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +195,33 @@ MonoBehaviour:
     Event: 300
     blitMaterial: {fileID: 0}
     blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
+    overrideGraphicsFormat: 0
+    graphicsFormat: 4
+--- !u!114 &7790420351114243098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2979d8fb661264bb86f64d9c3f3a81, type: 3}
+  m_Name: Thermal Vision
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 1000
+    blitMaterial: {fileID: 2100000, guid: 52a02d1b2c8e3d540b2acd8012b6fd69, type: 2}
+    blitMaterialPassIndex: -1
     setInverseViewMatrix: 0
     requireDepthNormals: 0
     srcType: 0

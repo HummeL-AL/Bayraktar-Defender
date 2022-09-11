@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NightVisionUpgrade
   m_EditorClassIdentifier: 
   isVisible: 1
-  unlockedByDefault: 0
+  unlockedByDefault: 1
   rendererDataIndex: 3
   rendererData: {fileID: 11400000, guid: 570ce555243c8ec4ab768d90ef74869e, type: 2}
   upgrades:
