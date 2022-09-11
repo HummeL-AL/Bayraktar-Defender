@@ -677,7 +677,7 @@ RectTransform:
   - {fileID: 7546783181262021906}
   - {fileID: 7546783181171554602}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -997,8 +997,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WeaponUpgrade, Assembly-CSharp
+      - m_Target: {fileID: 7546783182544143033}
+        m_TargetAssemblyTypeName: DroneUpgradeButton, Assembly-CSharp
         m_MethodName: TryToUpgrade
         m_Mode: 1
         m_Arguments:

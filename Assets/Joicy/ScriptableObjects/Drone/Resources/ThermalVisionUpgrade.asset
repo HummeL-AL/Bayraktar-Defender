@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ThermalVisionUpgrade
   m_EditorClassIdentifier: 
   isVisible: 1
-  unlockedByDefault: 1
+  unlockedByDefault: 0
   rendererDataIndex: 4
   rendererData: {fileID: 11400000, guid: 2633a0c7d3a63384cb97e668bca537cb, type: 2}
   upgrades:
