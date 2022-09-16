@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour, IModelSwitcher
+public class Health : MonoBehaviour, IModelSwitcher, IDamageable
 {
     public delegate void DamageDelegate(int damage);
     public DamageDelegate DamageTaken = null;
@@ -8,12 +8,13 @@ public class Health : MonoBehaviour, IModelSwitcher
     public delegate void DeathDelegate();
     public DeathDelegate Died = null;
 
+    public LODGroup[] Models { get => models; set => models = value; }
+    public LODSwitcher Switcher { get => switcher; set => switcher = value; }
+
     [SerializeField] protected int _armorLevel = 0;
     [SerializeField] protected int _healthPoints = 100;
     [SerializeField] protected int _maxHealthPoints = 100;
 
-    public LODGroup[] Models { get => models; set => models = value; }
-    public LODSwitcher Switcher { get => switcher; set => switcher = value; }
     [SerializeField] private LODSwitcher switcher = null;
     [SerializeField] private LODGroup[] models = null;
     [SerializeField] private bool staging = false;
@@ -22,11 +23,10 @@ public class Health : MonoBehaviour, IModelSwitcher
     private float stageStep = 1;
 
     public int HealthPoints { get => _healthPoints; private set => _healthPoints = Mathf.Clamp(value, 0, _maxHealthPoints); }
-    public int Armor { get => _armorLevel; }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, int damageLevel)
     {
-        if (HealthPoints > 0)
+        if (HealthPoints > 0 && damageLevel > _armorLevel)
         {
             HealthPoints -= damage;
             DamageTaken?.Invoke(damage);
@@ -37,6 +37,12 @@ public class Health : MonoBehaviour, IModelSwitcher
             }
         }
     }
+
+    public void TakeDamage(int damage, int damageLevel, float damageRadius)
+    {
+        TakeDamage(damage, damageLevel);
+    }
+
     private void Awake()
     {
         DamageTaken += OnDamageTaken;

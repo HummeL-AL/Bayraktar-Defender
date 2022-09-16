@@ -421,7 +421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 881424972}
+      - m_Target: {fileID: 881424971}
         m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
         m_MethodName: LoadSave
         m_Mode: 1
@@ -930,6 +930,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &596795021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 881424972}
+      - m_Target: {fileID: 881424971}
         m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
         m_MethodName: CreateNewSave
         m_Mode: 1
@@ -1297,18 +1298,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8918560340285546515, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
---- !u!114 &881424972 stripped
+--- !u!114 &881424971 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8918560340285546515, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3157171160985134077, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
   m_PrefabInstance: {fileID: 881424970}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb73610b042c0b47b4a15a9388aae1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3065169263b47ac43816a0a952c423fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &884443532
@@ -2439,7 +2441,7 @@ GameObject:
   - component: {fileID: 1781833415}
   - component: {fileID: 1781833414}
   m_Layer: 0
-  m_Name: SaveManager
+  m_Name: SettingsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

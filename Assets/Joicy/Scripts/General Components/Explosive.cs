@@ -4,7 +4,7 @@ using Zenject;
 
 public class Explosive : MonoBehaviour, IProjectileDataReceiver
 {
-    [SerializeField] private float penetrationLevel = 0;
+    [SerializeField] private int penetrationLevel = 0;
     [SerializeField] private float minDamage = 0;
     [SerializeField] private float maxDamage = 0;
     [SerializeField] private float explosionRadius = 0;
@@ -43,19 +43,17 @@ public class Explosive : MonoBehaviour, IProjectileDataReceiver
         foreach (Collider collider in Physics.OverlapSphere(impactPosition, explosionRadius, affectedLayers))
         {
             Transform hittedObject = collider.transform;
-            Health hittedHealth = hittedObject.GetComponent<Health>();
+            IDamageable[] hittedDamageables = hittedObject.GetComponents<IDamageable>();
 
-            if (penetrationLevel >= hittedHealth.Armor)
+
+            Vector3 closestPoint = Physics.ClosestPoint(impactPosition, collider, hittedObject.position, hittedObject.rotation);
+
+            float damagePercent = 1 - (Vector3.Distance(closestPoint, transform.position) / explosionRadius);
+            int damage = (int)(minDamage + deltaDamage * damagePercent);
+
+            foreach (IDamageable damageable in hittedDamageables)
             {
-                Vector3 closestPoint = Physics.ClosestPoint(impactPosition, collider, hittedObject.position, hittedObject.rotation);
-
-                float damagePercent = 1 - (Vector3.Distance(closestPoint, transform.position) / explosionRadius);
-                int damage = (int)(minDamage + deltaDamage * damagePercent);
-
-                if (hittedHealth)
-                {
-                    hittedHealth.TakeDamage(damage);
-                }
+                damageable.TakeDamage(damage, penetrationLevel, explosionRadius);
             }
         }
 

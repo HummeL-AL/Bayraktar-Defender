@@ -22,10 +22,8 @@ public class LevelGraphicInitializer : MonoBehaviour
             if (feature.GetType() == typeof(Blit))
             {
                 Blit blit = (Blit)feature;
-                Debug.Log(blit.name);
                 if (blit && blit.name == "Fog")
                 {
-                    Debug.Log("Fog is fog");
                     blit.blitPass.blitMaterial = _fogMaterial;
                     break;
                 }

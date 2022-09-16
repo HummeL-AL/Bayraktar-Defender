@@ -18,7 +18,7 @@ public class WeaponDisplay : MonoBehaviour
     {
         for (int i = 0; i < resourcesLoader.Weapons.Length; i++)
         {
-            if (resourcesLoader.DroneUpgrades[i].IsVisible)
+            if (resourcesLoader.Weapons[i].IsVisible)
             {
                 WeaponUpgradeButton upgrade = container.InstantiatePrefab(_prefab, transform).GetComponent<WeaponUpgradeButton>();
                 upgrade.SetWeapon(resourcesLoader.Weapons[i]);
@@ -29,7 +29,7 @@ public class WeaponDisplay : MonoBehaviour
 
     private void Clear()
     {
-        foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }

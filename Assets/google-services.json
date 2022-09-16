@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "917541603753",
+    "firebase_url": "https://operation-steel-bird-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "operation-steel-bird",
+    "storage_bucket": "operation-steel-bird.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917541603753:android:dca9249781bc345f70dcb8",
+        "android_client_info": {
+          "package_name": "com.Joicy.OperationSteelBird"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917541603753-j5v6pbp2ksnv9ck6e47jg8a5758crelm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzQwZVo6VF-5bQoQ4E1fIiZamqFEaJb3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917541603753-j5v6pbp2ksnv9ck6e47jg8a5758crelm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

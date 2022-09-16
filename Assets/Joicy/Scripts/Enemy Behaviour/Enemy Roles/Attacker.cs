@@ -10,7 +10,6 @@ public class Attacker : MonoBehaviour, IActivableRole
 
     [Inject] private City city = null;
 
-    private Health cityHealth = null;
     private IEnumerator attack = null;
 
     public void Activate()
@@ -32,14 +31,13 @@ public class Attacker : MonoBehaviour, IActivableRole
     private void Awake()
     {
         attack = Attack();
-        cityHealth = city.GetComponent<Health>();
     }
 
     private IEnumerator Attack()
     {
         while (true)
         {
-            cityHealth.TakeDamage(GetDamage());
+            city.TakeDamage(GetDamage(), 0);
             yield return new WaitForSeconds(attackCooldown);
         }
     }

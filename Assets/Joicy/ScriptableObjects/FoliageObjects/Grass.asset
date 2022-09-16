@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32828a8387692ca46b79ac8eeafabd0a, type: 3}
+  m_Name: Grass
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 0}
+  mesh: {fileID: 8254687373856176130, guid: 9374545e674c3184398f42f2630b2cde, type: 3}
+  material: {fileID: 2100000, guid: a0952e5c10b22384b81a1ca6363b0888, type: 2}
+  minimalDistance: 1

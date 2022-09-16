@@ -520,11 +520,11 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.075
+  - screenRelativeHeight: 0.05
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 341062668392484401}
-  - screenRelativeHeight: 0.02
+  - screenRelativeHeight: 0.01
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 5243543219614773976}
@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174471911292044098, guid: 23a424f2a72a5f347861a53d10789cc3, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.075
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7174471911292044098, guid: 23a424f2a72a5f347861a53d10789cc3, type: 3}
       propertyPath: m_LODs.Array.data[1].renderers.Array.size
@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174471911292044098, guid: 23a424f2a72a5f347861a53d10789cc3, type: 3}
       propertyPath: m_LODs.Array.data[1].screenRelativeHeight
-      value: 0.02
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7174471911292044098, guid: 23a424f2a72a5f347861a53d10789cc3, type: 3}
       propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer

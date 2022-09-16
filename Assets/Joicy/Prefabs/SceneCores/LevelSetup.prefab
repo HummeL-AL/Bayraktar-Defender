@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 474125696197382781}
   - component: {fileID: 474125696197382777}
   - component: {fileID: 474125696197382780}
-  - component: {fileID: 474125696197382776}
   - component: {fileID: 5433016668053937079}
   - component: {fileID: 6251792640500929488}
   - component: {fileID: 3840703932932193037}
@@ -508,18 +507,6 @@ MonoBehaviour:
   minMaxSpawnDistance: {x: 175, y: 225}
   spawnRadius: 25
   spawnCooldown: 0.1
---- !u!114 &474125696197382776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474125696197382768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb73610b042c0b47b4a15a9388aae1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5433016668053937079
 MonoBehaviour:
   m_ObjectHideFlags: 0

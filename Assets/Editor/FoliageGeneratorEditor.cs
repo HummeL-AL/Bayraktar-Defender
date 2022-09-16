@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(FoliageGenerator))]
+[CustomEditor(typeof(Foliage))]
 [CanEditMultipleObjects]
 public class FoliageGeneratorEditor : Editor
 {
@@ -9,7 +9,7 @@ public class FoliageGeneratorEditor : Editor
     {
         base.OnInspectorGUI();
 
-        FoliageGenerator foliageGenerator = (FoliageGenerator)target;
+        Foliage foliageGenerator = (Foliage)target;
 
         if (GUILayout.Button("Generate foliage"))
         {

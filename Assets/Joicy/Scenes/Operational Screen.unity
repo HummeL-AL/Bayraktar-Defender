@@ -2346,7 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3d2970ff1c5dd4bb96b6d95c8822a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveManager: {fileID: 1973495263}
+  saveManager: {fileID: 1973495262}
 --- !u!1 &793224863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,6 +4931,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1001 &1770363459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5464,15 +5465,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
---- !u!114 &1973495263 stripped
+--- !u!114 &1973495262 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8918560340285546515, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3157171160985134077, guid: c1316c5853b459b4da977e272513d7e7, type: 3}
   m_PrefabInstance: {fileID: 1973495261}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb73610b042c0b47b4a15a9388aae1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3065169263b47ac43816a0a952c423fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1982009762

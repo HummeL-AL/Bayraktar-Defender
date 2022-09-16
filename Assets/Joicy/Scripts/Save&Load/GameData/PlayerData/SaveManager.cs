@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -9,39 +10,84 @@ public class SaveManager : MonoBehaviour
 
     public void CreateNewSave()
     {
-        ISaver saver = GetSaver();
-        data.CopyValues(saver.CreateNewSave());
+        if (Utility.IsConnected())
+        {
+            Saver onlineSaver = new DatabaseManager(resourcesLoader);
+            data.CopyValues(onlineSaver.CreateNewSaveData());
+        }
+
+        if (!(Application.platform == RuntimePlatform.WebGLPlayer))
+        {
+            Saver localSaver = new LocalSaveManager(resourcesLoader);
+            data.CopyValues(localSaver.CreateNewSaveData());
+        }
+
         UpdateSave();
     }
 
     public void CreateSave()
     {
-        ISaver saver = GetSaver();
-        saver.CreateSave(data);
+        string saveDate = Utility.GetDate();
+        data.SaveTime = saveDate;
+
+        if(Utility.IsConnected())
+        {
+            Saver onlineSaver = new DatabaseManager(resourcesLoader);
+            onlineSaver.CreateSave(data);
+        }
+
+        if(!(Application.platform == RuntimePlatform.WebGLPlayer))
+        {
+            Saver localSaver = new LocalSaveManager(resourcesLoader);
+            localSaver.CreateSave(data);
+        }
     }
 
     public void LoadSave()
     {
-        ISaver saver = GetSaver();
-        data.CopyValues(saver.LoadSave());
+        SaveData localData = null;
+        SaveData onlineData = null;
+
+        if (Utility.IsConnected())
+        {
+            Saver onlineSaver = new DatabaseManager(resourcesLoader);
+            localData = onlineSaver.LoadSave();
+        }
+
+        if (!(Application.platform == RuntimePlatform.WebGLPlayer))
+        {
+            Saver localSaver = new LocalSaveManager(resourcesLoader);
+            onlineData = localSaver.LoadSave();
+        }
+
+        if(localData == null)
+        {
+            data.CopyValues(onlineData);
+        }
+        else if(onlineData == null)
+        {
+            data.CopyValues(localData);
+        }
+        else
+        {
+            long localSaveTime = Convert.ToInt64(localData.SaveTime);
+            long onlineSaveTime = Convert.ToInt64(onlineData.SaveTime);
+
+            if(localSaveTime > onlineSaveTime)
+            {
+                data.CopyValues(localData);
+            }
+            else
+            {
+                data.CopyValues(onlineData);
+            }
+        }
+
         UpdateSave();
     }
 
     private void UpdateSave()
     {
         container.Bind<SaveData>().FromInstance(data).AsSingle();
-    }
-
-    private ISaver GetSaver()
-    {
-        if (Utility.IsConnected())
-        {
-            return new LocalSaveManager(resourcesLoader);
-            //return new DatabaseManager();
-        }
-        else
-        {
-            return new LocalSaveManager(resourcesLoader);
-        }
     }
 }

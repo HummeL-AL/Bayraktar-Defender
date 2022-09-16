@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -7,10 +8,10 @@ public static class Utility
 {
     public static Vector2 FindPointOnCircle(float radius)
     {
-        float X = Random.Range(-radius, radius);
+        float X = UnityEngine.Random.Range(-radius, radius);
         float Z = Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(X, 2));
         
-        if(Random.Range(0,2) == 0)
+        if(UnityEngine.Random.Range(0,2) == 0)
         {
             Z *= -1;
         }
@@ -19,9 +20,9 @@ public static class Utility
 
     public static Vector2 FindPointInCircle(float radius)
     {
-        float X = Random.Range(-radius, radius);
+        float X = UnityEngine.Random.Range(-radius, radius);
         float maxZ = Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(X, 2));
-        float Z = Random.Range(-maxZ, maxZ);
+        float Z = UnityEngine.Random.Range(-maxZ, maxZ);
 
         return new Vector2(X, Z);
     }
@@ -132,5 +133,29 @@ public static class Utility
             return "";
         }
         return html;
+    }
+
+    public static string GetDate()
+    {
+        string year = DateTime.Now.Year.ToString();
+        string month = GetDecValue(DateTime.Now.Month);
+        string day = GetDecValue(DateTime.Now.Day);
+        string hour = GetDecValue(DateTime.Now.Hour);
+        string minute = GetDecValue(DateTime.Now.Minute);
+        string second = GetDecValue(DateTime.Now.Second);
+
+        return $"{year}{month}{day}{hour}{minute}{second}";
+    }
+
+    private static string GetDecValue(int value)
+    {
+        if(value >= 10)
+        {
+            return value.ToString();
+        }
+        else
+        {
+            return "0" + value.ToString();
+        }
     }
 }

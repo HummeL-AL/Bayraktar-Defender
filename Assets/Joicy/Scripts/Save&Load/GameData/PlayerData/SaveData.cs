@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using UnityEngine;
 
 [System.Serializable]
 public class SaveData
 {
+    public string SaveTime = null;
     public GameData GameData;
     public PlayerData PlayerData;
     public UpgradesData UpgradesData;
