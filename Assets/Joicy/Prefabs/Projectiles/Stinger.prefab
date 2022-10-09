@@ -146,7 +146,7 @@ MonoBehaviour:
   explosionRadius: 0
   affectedLayers:
     serializedVersion: 2
-    m_Bits: 960
+    m_Bits: 968
   soundEffects: []
   visualEffects: []
   projector: {fileID: 0}
@@ -163,8 +163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  TargetPosition: {x: 0, y: 0, z: 0}
   LeadDistance: 0
   RotationSpeed: 0
+  followLead: 1
 --- !u!114 &-2529902402772976619
 MonoBehaviour:
   m_ObjectHideFlags: 0

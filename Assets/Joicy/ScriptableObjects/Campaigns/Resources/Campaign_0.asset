@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f49c7bfb0da44443969a6b86ff31c5c, type: 3}
   m_Name: Campaign_0
   m_EditorClassIdentifier: 
-  campaignName: Forest
+  campaignName: Adventure begin
   _levels:
   - {fileID: 11400000, guid: 2b6015a739902384cb36c06422508376, type: 2}
   - {fileID: 11400000, guid: ca306fb416de26d49a75f5d9d6747a54, type: 2}
   - {fileID: 11400000, guid: 9f22aa3559f575c44b4dd08e308e5d49, type: 2}
+  - {fileID: 11400000, guid: 3ea22378babaaac4f803a7811670888b, type: 2}
+  - {fileID: 11400000, guid: 31bd3cb0427f5204bae8e4819d690ceb, type: 2}

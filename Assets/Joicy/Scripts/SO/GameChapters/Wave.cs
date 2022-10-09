@@ -1,13 +1,13 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Wave_", menuName = "Chapters/Wave", order = 1)]
-public class Wave : ScriptableObject
+[System.Serializable]
+public class Wave
 {
     [SerializeField] private int _spawnTime;
-    [SerializeField] private Enemy[] _enemies;
-    [SerializeField] private int[] _enemiesCount;
+    [SerializeField] private EnemyGroup[] _enemyGroups;
+    [SerializeField] private int[] _groupCounts;
 
     public int SpawnTime { get => _spawnTime; }
-    public Enemy[] Enemies { get => _enemies; }
-    public int[] EnemiesCount { get => _enemiesCount; }
+    public EnemyGroup[] EnemyGroups { get => _enemyGroups; }
+    public int[] GroupCounts { get => _groupCounts; }
 }

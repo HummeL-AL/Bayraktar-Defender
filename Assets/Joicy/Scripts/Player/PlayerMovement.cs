@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private VoidEventChannel speedChanged = null;
     [SerializeField] private BoolEventChannel gameStateChanged = null;
 
     [SerializeField] private float _minSpeed = 1f;
@@ -52,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
 
         float volumePercent = (_speed - _minSpeed) / (_maxSpeed - _minSpeed);
         _audioSource.volume = _minMaxVolume.x + (_minMaxVolume.y - _minMaxVolume.x) * volumePercent;
+
+        speedChanged.RaiseEvent();
     }
 
     private void OnGameStateChanged(bool resumed)

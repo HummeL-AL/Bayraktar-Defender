@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e465eaa51f77cc6449fe607d312c6a4d, type: 3}
   m_Name: Hellfire
   m_EditorClassIdentifier: 
+  isVisible: 1
   unlockedByDefault: 0
   _weaponLevels:
   - displayStats:
@@ -67,7 +68,7 @@ MonoBehaviour:
       _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
       _sensivity: 15
     _upgradeStats:
-      _price: 2500
+      _price: 1750
   - displayStats:
       name: Hellfire
       description: Powerful ATGM that allows to deliver democracy by your own hands.
@@ -94,7 +95,7 @@ MonoBehaviour:
       _landmark: {fileID: 6840685245477167841, guid: 909ea1e02b6597e48a33db36a76a8a8a, type: 3}
       _sensivity: 30
     _upgradeStats:
-      _price: 5000
+      _price: 2250
   - displayStats:
       name: Hellfire
       description: Powerful ATGM that allows to deliver democracy by your own hands.

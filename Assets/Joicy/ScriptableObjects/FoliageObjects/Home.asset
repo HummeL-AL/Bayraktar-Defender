@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32828a8387692ca46b79ac8eeafabd0a, type: 3}
+  m_Script: {fileID: 11500000, guid: f346da1abbdfd4546bbecb027a561e46, type: 3}
   m_Name: Home
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
-  mesh: {fileID: -5495902117074765545, guid: 1dab8c904b88a23458fb4964efabbc5b, type: 3}
-  material: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
+  objectPrefab: {fileID: 5549633049428061601, guid: 23a424f2a72a5f347861a53d10789cc3, type: 3}
   minimalDistance: 5
+  material: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
+  MeshLODs:
+  - {fileID: -5495902117074765545, guid: 1dab8c904b88a23458fb4964efabbc5b, type: 3}
+  - {fileID: -5495902117074765545, guid: 1dab8c904b88a23458fb4964efabbc5b, type: 3}
+  - {fileID: -5495902117074765545, guid: 1dab8c904b88a23458fb4964efabbc5b, type: 3}

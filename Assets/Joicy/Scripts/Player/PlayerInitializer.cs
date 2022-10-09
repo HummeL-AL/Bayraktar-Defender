@@ -11,7 +11,7 @@ public class PlayerInitializer : MonoBehaviour
     [Inject] private ResourcesLoader resourcesLoader = null;
     [Inject] private SaveData saveData = null;
 
-    private void Awake()
+    private void Start()
     {
         Initialize();
     }

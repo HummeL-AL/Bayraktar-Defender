@@ -167,7 +167,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7420800098538863281}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &4992063444653134628
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8637695454525810665}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1001 &1760086266970034342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,6 +366,10 @@ PrefabInstance:
     - target: {fileID: 3475723248283080962, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: m_Center.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502849431530296283, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
+      propertyPath: reward
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4732183401339100995, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: m_RootOrder
@@ -446,6 +450,10 @@ PrefabInstance:
     - target: {fileID: 6075562314763099455, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: m_Size
       value: 3.732505
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075562314763099455, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075562314763099455, guid: 56e98bc8c3a14c94689e07cd8b173e48, type: 3}
       propertyPath: m_LocalReferencePoint.y

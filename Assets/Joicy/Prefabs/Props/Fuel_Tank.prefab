@@ -134,7 +134,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6028349305592172930}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &2957328825645148007
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8584135078732477334}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &5613707078636433970
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 122639376772206851}
   - component: {fileID: 7929840130537903783}
   - component: {fileID: 4210435487767977991}
+  - component: {fileID: 6630156523966923840}
   m_Layer: 8
   m_Name: Fuel_Tank
   m_TagString: Untagged
@@ -377,3 +378,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a506cc94326871e4cb6b50980aa6234e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!205 &6630156523966923840
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094859195589623296}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 1.2999997, z: 0}
+  m_Size: 6
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8584135078732477334}
+  m_Enabled: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e465eaa51f77cc6449fe607d312c6a4d, type: 3}
   m_Name: Machinegun
   m_EditorClassIdentifier: 
+  isVisible: 1
   unlockedByDefault: 1
   _weaponLevels:
   - displayStats:
@@ -67,7 +68,7 @@ MonoBehaviour:
       _landmark: {fileID: 0}
       _sensivity: 0
     _upgradeStats:
-      _price: 1000
+      _price: 750
   - displayStats:
       name: Machinegun
       description: High fire rate of this thing can change result of the battle.
@@ -94,7 +95,7 @@ MonoBehaviour:
       _landmark: {fileID: 0}
       _sensivity: 0
     _upgradeStats:
-      _price: 2500
+      _price: 1500
   - displayStats:
       name: Machinegun
       description: High fire rate of this thing can change result of the battle.

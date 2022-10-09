@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Joicy/Scenes/Main Menu.unity
     guid: 2fbf19609182da64d8b37f49d9f5d3fa
@@ -16,17 +13,17 @@ EditorBuildSettings:
     guid: d89f29d5254a00940bfc1741b771fca4
   - enabled: 1
     path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_0.unity
-    guid: 2530e21dc5ca8b14a9fbaa80f67d1efc
-  - enabled: 1
-    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_1.unity
-    guid: c947a356116bdfa46a13c6563f1e21a9
+    guid: d11ae171dcdc7734fbb840fb48b70ef5
   - enabled: 1
     path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_2.unity
-    guid: 8388f06801171e74a8d48ceb3ef104ba
+    guid: 8305d747c347c504b91de1b2bdb52e79
   - enabled: 1
-    path: Assets/Joicy/Scenes/Campaigns/Testing/Levels/Level_3_0.unity
-    guid: 704df62b09513bd4f82e5f6a7ab78261
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_1.unity
+    guid: 110dac2b6b468bc41ba49f12b5d2b49a
   - enabled: 1
-    path: Assets/Joicy/Scenes/Campaigns/Testing/Levels/Level_3_1.unity
-    guid: 4d74105b0bd29a443b009502f566a0cd
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_3.unity
+    guid: a05ab4ba68ff1e14f82adb4583557afb
+  - enabled: 1
+    path: Assets/Joicy/Scenes/Campaigns/Campaign_0/Levels/Level_0_4.unity
+    guid: a7a329c81e6cb6044965efd5721623a2
   m_configObjects: {}

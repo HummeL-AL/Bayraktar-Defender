@@ -77,11 +77,11 @@ public class PlayerWeapon : MonoBehaviour
 
         if (nextID > maxID)
         {
-            _choosedWeapon = _weapons[0];
+            SetWeapon(0);
         }
         else
         {
-            _choosedWeapon = _weapons[nextID];
+            SetWeapon(nextID);
         }
 
         weaponSwitchedChannel.RaiseEvent();
@@ -94,11 +94,11 @@ public class PlayerWeapon : MonoBehaviour
 
         if (prevID < 0)
         {
-            _choosedWeapon = _weapons[maxID];
+            SetWeapon(maxID);
         }
         else
         {
-            _choosedWeapon = _weapons[prevID];
+            SetWeapon(prevID);
         }
 
         weaponSwitchedChannel.RaiseEvent();

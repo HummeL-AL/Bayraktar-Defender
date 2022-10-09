@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f346da1abbdfd4546bbecb027a561e46, type: 3}
+  m_Name: Dead_Spruce
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4962336773189504509, guid: ef4b910fc2c7dec4799765ef49916c07, type: 3}
+  minimalDistance: 4
+  material: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
+  MeshLODs:
+  - {fileID: -3523722554024307984, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: -6743922288109926172, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: -6743922288109926172, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: -6743922288109926172, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}

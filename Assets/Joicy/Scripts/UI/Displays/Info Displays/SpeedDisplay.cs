@@ -1,20 +1,22 @@
 using UnityEngine;
-using TMPro;
 
-public class SpeedDisplay : MonoBehaviour
+public class SpeedDisplay : InfoDisplay
 {
     [SerializeField] private PlayerMovement _player = null;
 
-    private TMP_Text display = null;
-
-    private void Awake()
+    protected override void Awake()
     {
-        display = GetComponent<TMP_Text>();
+        base.Awake();
     }
 
-    public void UpdateValue()
+    protected override void UpdateValue()
     {
         string speed = string.Format("{0:0.0}", _player.Speed);
         display.text = $"SPD:{speed}";
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
     }
 }

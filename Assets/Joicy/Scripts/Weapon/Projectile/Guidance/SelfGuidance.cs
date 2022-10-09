@@ -3,9 +3,11 @@ using UnityEngine;
 public class SelfGuidance : MonoBehaviour, IProjectileDataReceiver
 {
     public Transform Target = null;
+    public Vector3 TargetPosition = Vector3.zero;
     public float LeadDistance = 0f;
     public float RotationSpeed = 5f;
 
+    [SerializeField] private bool followLead = false;
     private Rigidbody rigidbody = null;
 
     public void SetStats(ProjectileStats projectileStats)
@@ -25,11 +27,19 @@ public class SelfGuidance : MonoBehaviour, IProjectileDataReceiver
 
     private void Aim()
     {
-        Vector3 targetPoint = GetTargetPoint();
+        Vector3 targetPoint = Vector3.zero;
+        if (followLead)
+        {
+            targetPoint = GetTargetPoint();
+        }
+        else
+        {
+            targetPoint = TargetPosition;
+        }
+
         Vector3 relativeDirection = targetPoint - transform.position;
         Quaternion targetRotation = Quaternion.LookRotation(relativeDirection, transform.up);
         Quaternion availableRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, RotationSpeed * Time.deltaTime);
-        //Quaternion availableRotation = Quaternion.FromToRotation(transform.forward, Vector3.up);
 
         rigidbody.MoveRotation(availableRotation);
     }

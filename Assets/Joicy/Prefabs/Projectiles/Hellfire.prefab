@@ -434,7 +434,7 @@ MonoBehaviour:
   explosionRadius: 0
   affectedLayers:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 968
   soundEffects: []
   visualEffects: []
   projector: {fileID: 0}

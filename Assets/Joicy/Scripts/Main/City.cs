@@ -17,7 +17,7 @@ public class City : MonoBehaviour, IDamageable
             people -= damage;
             OnDamageTaken(damage);
 
-            if (people < 0)
+            if (people <= 0)
             {
                 Death();
             }

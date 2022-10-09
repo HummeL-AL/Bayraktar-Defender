@@ -41,19 +41,29 @@ public class WaveSpawner : MonoBehaviour
 
     private IEnumerator SpawnWave(Wave wave)
     {
-        Enemy[] enemies = wave.Enemies;
-        Vector2 spawnCenter = GetSpawnCenter();
-
-        for (int enemyTypeIndex = 0; enemyTypeIndex < enemies.Length; enemyTypeIndex++)
+        for (int groupTypeIndex = 0; groupTypeIndex < wave.EnemyGroups.Length; groupTypeIndex++)
         {
-            for (int enemyIndex = 0; enemyIndex < wave.EnemiesCount[enemyTypeIndex]; enemyIndex++)
+            for(int groupIndex = 0; groupIndex < wave.GroupCounts[groupTypeIndex]; groupIndex++)
             {
-                Vector2 spawnOffset = Utility.FindPointInCircle(spawnRadius);
-                Vector3 spawnPoint = new Vector3(spawnCenter.x + spawnOffset.x, 0f, spawnCenter.y + spawnOffset.y);
+                EnemyGroup group = wave.EnemyGroups[groupTypeIndex];
 
-                SpawnEnemy(enemies[enemyTypeIndex], spawnPoint);
+                Enemy[] enemies = group.Enemies;
+                Vector2 spawnCenter = GetSpawnCenter();
 
-                yield return new WaitForSeconds(spawnCooldown);
+                for (int enemyTypeIndex = 0; enemyTypeIndex < enemies.Length; enemyTypeIndex++)
+                {
+                    for (int enemyIndex = 0; enemyIndex < group.EnemiesCount[enemyTypeIndex]; enemyIndex++)
+                    {
+                        Vector2 spawnOffset = Utility.FindPointInCircle(spawnRadius);
+                        Vector3 spawnPoint = new Vector3(spawnCenter.x + spawnOffset.x, 0f, spawnCenter.y + spawnOffset.y);
+
+                        SpawnEnemy(enemies[enemyTypeIndex], spawnPoint);
+
+                        yield return new WaitForSeconds(spawnCooldown);
+
+                    }
+
+                }
             }
         }
     }

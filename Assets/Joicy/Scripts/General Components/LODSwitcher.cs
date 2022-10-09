@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LODSwitcher : MonoBehaviour
 {
+    private LODGroup currentLODGroup = null;
     private LODGroup[] LODGroups = null;
 
     public void SwitchLOD(LODGroup targetGroup)
@@ -11,6 +12,7 @@ public class LODSwitcher : MonoBehaviour
         {
             if(group == targetGroup)
             {
+                currentLODGroup.SetLODs(group.GetLODs());
                 EnableLOD(group);
             }
             else
@@ -27,8 +29,10 @@ public class LODSwitcher : MonoBehaviour
 
     private void Initialize()
     {
+        currentLODGroup = GetComponent<LODGroup>();
+
         UpdateLODs();
-        EnableLOD(LODGroups[0]);
+        SwitchLOD(LODGroups[0]);
     }
 
     private void UpdateLODs()

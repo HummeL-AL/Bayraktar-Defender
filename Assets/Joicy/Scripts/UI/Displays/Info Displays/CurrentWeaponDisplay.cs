@@ -1,26 +1,21 @@
 using UnityEngine;
-using TMPro;
 
-public class CurrentWeaponDisplay : MonoBehaviour
+public class CurrentWeaponDisplay : InfoDisplay
 {
-    [SerializeField] private VoidEventChannel _eventChannel = null;
     [SerializeField] private PlayerWeapon _playerWeapon = null;
-
-    private TMP_Text display = null;
-
-    private void Awake()
+    
+    protected override void Awake()
     {
-        display = GetComponent<TMP_Text>();
-        _eventChannel.ChannelEvent += UpdateValue;
+        base.Awake();
     }
 
-    private void UpdateValue()
+    protected override void UpdateValue()
     {
         display.text = $"WEP:{_playerWeapon.CurrentWeapon.WeaponStats.DisplayStats.Name}";
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
-        _eventChannel.ChannelEvent -= UpdateValue;
+        base.OnDestroy();
     }
 }

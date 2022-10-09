@@ -3147,6 +3147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d36b48f3ee9df47877edce1f3ae711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventChannel: {fileID: 11400000, guid: c6c7f8ff59ae4c24b8f67c72e4a01940, type: 2}
   _player: {fileID: 474125698040009442}
 --- !u!1 &474125697232976923
 GameObject:
@@ -3207,6 +3208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e6141c1f2542240bbfd6c302f1578d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eventChannel: {fileID: 11400000, guid: e635a26ab41533349bd2ede4d59cec6d, type: 2}
   _object: {fileID: 474125696574665004}
 --- !u!114 &474125697232976921
 MonoBehaviour:
@@ -5239,6 +5241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2918eab5f2a1e24ea29ea5db54d6628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedChanged: {fileID: 11400000, guid: c6c7f8ff59ae4c24b8f67c72e4a01940, type: 2}
   gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
   _minSpeed: 1
   _maxSpeed: 5
@@ -5276,6 +5279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f509fc62c48b46d438ba114bff7f950c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angleChanged: {fileID: 11400000, guid: e635a26ab41533349bd2ede4d59cec6d, type: 2}
   gameStateChanged: {fileID: 11400000, guid: 462466e6239b6ac4ea70332c05c4e4dc, type: 2}
   settingsChangedChannel: {fileID: 11400000, guid: 1f71df6d860f1c54cbbfbb861e87b58d, type: 2}
   mainCamera: {fileID: 0}
@@ -6104,7 +6108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3939770936035188141}
   - component: {fileID: 7319552692978563532}
-  - component: {fileID: 2710004659842522661}
   - component: {fileID: 8083087355704364562}
   m_Layer: 9
   m_Name: City
@@ -6143,24 +6146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cityAttackedChannel: {fileID: 11400000, guid: c4003efbe65f86542a71b42bdaee05df, type: 2}
   gameLostChannel: {fileID: 11400000, guid: aef69bad15d06844286eb4f82368f243, type: 2}
---- !u!114 &2710004659842522661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939770936035188140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c87511b42176a134fa03290d2c29572d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _armorLevel: 0
-  _healthPoints: 100
-  _maxHealthPoints: 100
-  switcher: {fileID: 0}
-  models: []
-  staging: 0
 --- !u!135 &8083087355704364562
 SphereCollider:
   m_ObjectHideFlags: 0

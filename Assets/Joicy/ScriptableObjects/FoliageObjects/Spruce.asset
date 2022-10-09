@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32828a8387692ca46b79ac8eeafabd0a, type: 3}
+  m_Script: {fileID: 11500000, guid: f346da1abbdfd4546bbecb027a561e46, type: 3}
   m_Name: Spruce
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
-  mesh: {fileID: 961103875905086603, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
-  material: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
+  objectPrefab: {fileID: 4962336773189504509, guid: fb3741cf1e4c25646ae0175128fd370f, type: 3}
   minimalDistance: 3
+  material: {fileID: 2100000, guid: 0a657801afde0384eaad9b70b9e4d259, type: 2}
+  MeshLODs:
+  - {fileID: 961103875905086603, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: 605522272448646793, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: 8254793169415400984, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}
+  - {fileID: -8670353450691504198, guid: 12dd9c5120c69e24fa1e1b8a976411a3, type: 3}

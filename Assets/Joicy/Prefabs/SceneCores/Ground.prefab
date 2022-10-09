@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9009725089233674746}
   - component: {fileID: 8953690974000303409}
+  - component: {fileID: 8604244201495178398}
   m_Layer: 3
   m_Name: Foliage
   m_TagString: Untagged
@@ -44,17 +45,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d289872fff5496648bce3819e8eea30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantPrefabs: []
-  mapSize: {x: 1, y: 1}
-  landscapeTexture: {fileID: 0}
-  landscapeHeight: 0
-  distanceBeetweenObjects:
+  fieldSize: {x: 1000, y: 1000}
+  avalaibleObjects: []
+  weights: []
+  triesCount: 10
+  distribution:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  cancelCount: 10
+  raycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &8604244201495178398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408968412831624273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865880144ce64144d8318c52f85c202a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellCreated: {fileID: 11400000, guid: 049738377c4888146bb22f18ee95faaf, type: 2}
+  cellDestroyed: {fileID: 11400000, guid: 5954dc4bbdb8cb542a12dcdb446d168f, type: 2}
+  sizeLimits: {x: 60, y: 250}
+  LODDistances:
+  - 0
+  maximalDistance: 25
+  cellPrefab: {fileID: 1911783612971684239, guid: 4dff8840d2af9fb42a3450288e5a98e0, type: 3}
+  fieldSize: {x: 1000, y: 1000}
 --- !u!1 &5121312718312807968
 GameObject:
   m_ObjectHideFlags: 0

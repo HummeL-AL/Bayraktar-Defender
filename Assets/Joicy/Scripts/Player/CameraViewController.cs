@@ -3,6 +3,7 @@ using Zenject;
 
 public class CameraViewController : MonoBehaviour
 {
+    [SerializeField] private VoidEventChannel angleChanged = null;
     [SerializeField] private BoolEventChannel gameStateChanged = null;
     [SerializeField] private VoidEventChannel settingsChangedChannel = null;
 
@@ -64,6 +65,8 @@ public class CameraViewController : MonoBehaviour
         currentAngles.y = Mathf.Clamp(currentAngles.y, _minAngles.y, _maxAngles.y);
 
         camera.localEulerAngles = currentAngles;
+
+        angleChanged.RaiseEvent();
     }
 
     private void ApplySettings()

@@ -1,22 +1,21 @@
-using UnityEngine;
 using Zenject;
-using TMPro;
 
-public class EnemiesDisplay : MonoBehaviour
+public class EnemiesDisplay : InfoDisplay
 {
-    [SerializeField] private VoidEventChannel _eventChannel = null;
-
     [Inject] private LevelStats _stats = null;
-    private TMP_Text display = null;
 
-    private void Awake()
+    protected override void Awake()
     {
-        display = GetComponent<TMP_Text>();
-        _eventChannel.ChannelEvent += UpdateValue;
+        base.Awake();
     }
 
-    private void UpdateValue()
+    protected override void UpdateValue()
     {
         display.text = $"ENM:{_stats.EnemiesCount}";
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
     }
 }

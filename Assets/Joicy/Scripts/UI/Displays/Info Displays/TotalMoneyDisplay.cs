@@ -2,7 +2,7 @@ using UnityEngine;
 using Zenject;
 using TMPro;
 
-public class TotalMoneyDisplay : MonoBehaviour
+public class TotalMoneyDisplay : InfoDisplay
 {
     [SerializeField] private VoidEventChannel moneyChangedChannel = null;
 

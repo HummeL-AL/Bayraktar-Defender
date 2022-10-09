@@ -26,7 +26,7 @@ public class Health : MonoBehaviour, IModelSwitcher, IDamageable
 
     public void TakeDamage(int damage, int damageLevel)
     {
-        if (HealthPoints > 0 && damageLevel > _armorLevel)
+        if (HealthPoints > 0 && damageLevel >= _armorLevel)
         {
             HealthPoints -= damage;
             DamageTaken?.Invoke(damage);

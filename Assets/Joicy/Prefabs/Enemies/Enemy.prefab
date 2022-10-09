@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1363286558183751573}
   - component: {fileID: 5714525394807869441}
   - component: {fileID: 5033032351359079807}
+  - component: {fileID: -1815104196398767745}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -114,6 +115,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a506cc94326871e4cb6b50980aa6234e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!205 &-1815104196398767745
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2508359639006613399}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9069452003407853986}
+  m_Enabled: 1
 --- !u!1 &6975838472872576245
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,4 +268,4 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 9069452003407853986}
-  m_Enabled: 1
+  m_Enabled: 0
